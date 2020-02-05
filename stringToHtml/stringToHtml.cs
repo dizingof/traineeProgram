@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace stringToHtml
 {
-    class Program
+    class stringToHtml
     {
         static void Main(string[] args)
         {
