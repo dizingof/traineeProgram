@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="notes\TextFile1.txt" />
+    <Content Include="notes\Task.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
