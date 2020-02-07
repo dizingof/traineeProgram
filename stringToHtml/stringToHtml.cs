@@ -10,19 +10,23 @@ namespace stringToHtml
     {
         static void Main(string[] args)
         {
-            string resultEnterData = EnterData();
+            string [] resultEnterData = EnterData();
             var finish = BuildOutputResult(resultEnterData);
             Console.WriteLine(finish);
             Console.ReadKey();
 
         }
-        public static string EnterData()
+        public static string [] EnterData()
         {
             Console.WriteLine("Vvedite dannie v formate: \"Project: P1, Project: P2\"");
-            string enteredData = Console.ReadLine();
+            string[] enteredData = new string[10];
+            for (int i = 0; i < 9; i++)
+            {
+                enteredData[i] = Console.ReadLine();
+            }
             return enteredData;
         }
-        public static string BuildOutputResult(string resultEnterData)
+        public static string BuildOutputResult(string [] resultEnterData)
         {
             string firstResult = RemoveWordFromEnteredData(resultEnterData, ", Project:");
             string secondResult = RemoveWordFromEnteredData(firstResult, "Project: ");
