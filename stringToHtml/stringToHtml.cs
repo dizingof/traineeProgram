@@ -39,7 +39,7 @@ namespace stringToHtml
             string strOutputResult = $"Project<ul>{strOutPut}</ul>";
             return strOutputResult;
         }
-        public static string RemoveWordFromEnteredData(string inputStr, string removeStr)
+        public static string RemoveWordFromEnteredData(string [] inputStr, string removeStr)
         {
             int number = inputStr.IndexOf(removeStr);
             var inputStrAfterRemove = inputStr.Remove(number, removeStr.Length);
