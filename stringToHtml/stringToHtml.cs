@@ -48,9 +48,9 @@ namespace ConsoleApp1
             string strOutPut = string.Empty;
             foreach (var item in myArray)
             {
-                strOutPut += $"<li>{item}</li>";
+                strOutPut += $"<li>Project:</li><li>{item}</li>";
             }
-            string strOutputResult = $"Project<ul>{strOutPut}</ul>";
+            string strOutputResult = $"<ul>{strOutPut}</ul>";
             Console.WriteLine(strOutputResult);
             return strOutputResult;
         }
