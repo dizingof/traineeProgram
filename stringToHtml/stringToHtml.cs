@@ -1,50 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace stringToHtml
+namespace ConsoleApp1
 {
-    class stringToHtml
+    class Program
     {
         static void Main(string[] args)
         {
-            string [] resultEnterData = EnterData();
-            var finish = BuildOutputResult(resultEnterData);
-            Console.WriteLine(finish);
-            Console.ReadKey();
 
+           var enteredArray = VvodMasiva();
+           var afterConvert = ConvertToHtml(enteredArray);
+            WriteToFile(afterConvert);
+            Console.ReadKey();
         }
-        public static string [] EnterData()
+
+
+        public static string [] VvodMasiva()
         {
-            Console.WriteLine("Vvedite dannie v formate: \"Project: P1, Project: P2\"");
-            string[] enteredData = new string[10];
-            for (int i = 0; i < 9; i++)
+            Console.Write("vvedite kolichestvo proectov:\t");
+            int elementsCount = int.Parse(Console.ReadLine());
+
+            string[] myArray = new string[elementsCount];
+            for (int i = 0; i < myArray.Length; i++)
             {
-                enteredData[i] = Console.ReadLine();
+                
+                Console.WriteLine($"Vvedite proect number {i + 1} ili dlya ostanovki vvoda vvedite \"stop\"");
+                var input = Console.ReadLine();
+                if (input == "stop")
+                    break;
+                else
+                    myArray[i] = input;
             }
-            return enteredData;
-        }
-        public static string BuildOutputResult(string [] resultEnterData)
-        {
-            string firstResult = RemoveWordFromEnteredData(resultEnterData, ", Project:");
-            string secondResult = RemoveWordFromEnteredData(firstResult, "Project: ");
-            var resultAfterSplit = secondResult.Split(' ');
-            string strOutPut = string.Empty;
-            foreach (var item in resultAfterSplit)
+
+            Console.WriteLine("Vivod masiva");
+            for (int i = 0; i < myArray.Length; i++)
             {
-                 strOutPut += $"<li>{item}</li>";
+                Console.WriteLine(myArray[i]);
+            }
+            return myArray;
+        }
+        public static string ConvertToHtml(string[] myArray) 
+        {
+            string strOutPut = string.Empty;
+            foreach (var item in myArray)
+            {
+                strOutPut += $"<li>{item}</li>";
             }
             string strOutputResult = $"Project<ul>{strOutPut}</ul>";
+            Console.WriteLine(strOutputResult);
             return strOutputResult;
         }
-        public static string RemoveWordFromEnteredData(string [] inputStr, string removeStr)
+        public static void WriteToFile(string strOutputResult)
         {
-            int number = inputStr.IndexOf(removeStr);
-            var inputStrAfterRemove = inputStr.Remove(number, removeStr.Length);
-            return inputStrAfterRemove;
+            StreamWriter sw = new StreamWriter(@"C:\roma\ListProject.html");
+            sw.WriteLine(strOutputResult);
+            sw.Close();
         }
-        
     }
+
 }
