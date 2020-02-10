@@ -12,53 +12,92 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-           var enteredArray = VvodMasiva();
-           var afterConvert = ConvertToHtml(enteredArray);
+            var enteredArray = VvodMasiva();
+            var afterConvert = ConvertToHtml(enteredArray);
             WriteToFile(afterConvert);
             Console.ReadKey();
         }
 
 
-        public static string [] VvodMasiva()
+        public static string[] VvodMasiva()
         {
-            Console.Write("vvedite kolichestvo proectov:\t");
-            int elementsCount = int.Parse(Console.ReadLine());
-
-            string[] myArray = new string[elementsCount];
-            for (int i = 0; i < myArray.Length; i++)
+            try
             {
-                
-                Console.WriteLine($"Vvedite proect number {i + 1} ili dlya ostanovki vvoda vvedite \"stop\"");
-                var input = Console.ReadLine();
-                if (input == "stop")
-                    break;
-                else
-                    myArray[i] = input;
+                Console.Write("vvedite kolichestvo proectov:\t");
+                int elementsCount = int.Parse(Console.ReadLine());
+
+                string[] myArray = new string[elementsCount];
+                for (int i = 0; i < myArray.Length; i++)
+                {
+
+                    Console.WriteLine($"Vvedite proect number {i + 1} ili dlya ostanovki vvoda vvedite \"stop\"");
+                    var input = Console.ReadLine();
+                    if (input == "stop")
+
+                        break;
+                    else
+                        myArray[i] = input;
+
+                }
+
+                //for (int i = 0; i < myArray.Length; i++)
+                //{
+
+
+                //        if (myArray[i] == null)
+                //            {
+                //                 myArray[i].Remove(0, i);
+
+                //            }
+
+                //    }
+
+                Console.WriteLine("Vivod masiva");
+                for (int i = 0; i < myArray.Length; i++)
+                {
+                    Console.WriteLine(myArray[i]);
+                }
+                return myArray;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"erorr: {ex.ToString()}");
+                return null;
             }
 
-            Console.WriteLine("Vivod masiva");
-            for (int i = 0; i < myArray.Length; i++)
-            {
-                Console.WriteLine(myArray[i]);
-            }
-            return myArray;
         }
-        public static string ConvertToHtml(string[] myArray) 
+        public static string ConvertToHtml(string[] myArray)
         {
-            string strOutPut = string.Empty;
-            foreach (var item in myArray)
+            try
             {
-                strOutPut += $"<li>Project:</li><li>{item}</li>";
+                string strOutPut = string.Empty;
+                foreach (var item in myArray)
+                {
+                    strOutPut += $"<li>Project:</li><li>{item}</li>";
+                }
+                string strOutputResult = $"<ul>{strOutPut}</ul>";
+                Console.WriteLine(strOutputResult);
+                return strOutputResult;
             }
-            string strOutputResult = $"<ul>{strOutPut}</ul>";
-            Console.WriteLine(strOutputResult);
-            return strOutputResult;
+            catch(Exception ex)
+            {
+                Console.WriteLine($"erorr: {ex.ToString()}");
+                return null;
+            }
         }
         public static void WriteToFile(string strOutputResult)
         {
-            StreamWriter sw = new StreamWriter(@"C:\roma\ListProject.html");
-            sw.WriteLine(strOutputResult);
-            sw.Close();
+            try
+            {
+                StreamWriter sw = new StreamWriter(@"C:\roma\ListProject.html");
+                sw.WriteLine(strOutputResult);
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"erorr: {ex.ToString()}");
+               
+            }
         }
     }
 
