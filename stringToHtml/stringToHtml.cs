@@ -18,43 +18,40 @@ namespace ConsoleApp1
         }
 
 
-        public static string[] VvodMasiva()
+        public static string[,] VvodMasiva()
         {
             try
             {
                 Console.Write("vvedite kolichestvo proectov:\t");
-                int elementsCount = int.Parse(Console.ReadLine());
+                int elementsCountI = int.Parse(Console.ReadLine());
 
-                string[] myArray = new string[elementsCount];
-                for (int i = 0; i < myArray.Length; i++)
+                int elementsCountJ = 3;
+                string[,] myArray = new string[elementsCountI, elementsCountJ];
+
+                for (int i = 0; i < elementsCountI; i++)
                 {
+                    Console.WriteLine("VVedite nazvanie minZarabotok maxZarabotok");
+                    for (int j = 0; j < elementsCountJ; j++)
+                    {
 
-                    Console.WriteLine($"Vvedite proect number {i + 1} ili dlya ostanovki vvoda vvedite \"stop\"");
-                    var input = Console.ReadLine();
-                    if (input == "stop")
-
-                        break;
-                    else
-                        myArray[i] = input;
-
+                        myArray[i, j] = Console.ReadLine();
+                        //Console.ReadLine(mat[i, j]);
+                    }
                 }
-
-                //for (int i = 0; i < myArray.Length; i++)
-                //{
-
-
-                //        if (myArray[i] == null)
-                //            {
-                //                 myArray[i].Remove(0, i);
-
-                //            }
-
-                //    }
-
-                Console.WriteLine("Vivod masiva");
-                for (int i = 0; i < myArray.Length; i++)
+                Console.WriteLine("Nazvanie proekta      MinZarabotok     MaxZarabotok");
+                for (int i = 0; i < elementsCountI; i++)
                 {
-                    Console.WriteLine(myArray[i]);
+                    Console.WriteLine("\n");
+
+                    for (int j = 0; j < elementsCountJ; j++)
+                    {
+
+                        Console.Write(myArray[i, j] + "\t" + "\t" + "\t");
+                        
+
+
+                    }
+                    Console.WriteLine("\n");
                 }
                 return myArray;
             }
@@ -65,7 +62,7 @@ namespace ConsoleApp1
             }
 
         }
-        public static void ChooseOptionOfOutput(string[] enteredArray)
+        public static void ChooseOptionOfOutput(string[,] enteredArray)
         {
             Console.WriteLine("Vvedite 1 - dlya vivoda v formate (List), 2 - dlya vivoda v formate (Table), 3 - dlya vivoda v formate (Json)");
             string numberChoiseOption = Console.ReadLine();
@@ -87,7 +84,7 @@ namespace ConsoleApp1
             
         }
 
-        public static string ConvertToHtml(string[] myArray)
+        public static string ConvertToHtml(string[,] myArray)
         {
             try
             {
@@ -106,7 +103,7 @@ namespace ConsoleApp1
                 return null;
             }
         }
-        public static string ConvertToHtmlTable(string[] myArray)
+        public static string ConvertToHtmlTable(string[,] myArray)
         {
             try
             {
