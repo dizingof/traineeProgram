@@ -13,7 +13,9 @@ namespace ConsoleApp1
         {
 
             var enteredArray = VvodMasiva();
-            var afterConvert = ConvertToHtml(enteredArray);
+            //var afterConvert = ConvertToHtml(enteredArray);
+            //WriteToFile(afterConvert);
+            var afterConvert = ConvertToHtmlTable(enteredArray);
             WriteToFile(afterConvert);
             Console.ReadKey();
         }
@@ -79,7 +81,27 @@ namespace ConsoleApp1
                 Console.WriteLine(strOutputResult);
                 return strOutputResult;
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                Console.WriteLine($"erorr: {ex.ToString()}");
+                return null;
+            }
+        }
+        public static string ConvertToHtmlTable(string[] myArray)
+        {
+            try
+            {
+                string strOutPut = string.Empty;
+                foreach (var item in myArray)
+                {
+                    strOutPut += $"<li>Project:</li><li>{item}</li>";
+                }
+                string strOutputResultTable = $"<table border=\"1\"><tr><th>Project</th></tr><tr><td>{strOutPut}</td></tr><tr><td>Ячейка 3</td></tr><tr><td>Ячейка 3</td></tr></table>";
+                    
+                    Console.WriteLine(strOutputResultTable);
+                return strOutputResultTable;
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine($"erorr: {ex.ToString()}");
                 return null;
@@ -96,7 +118,7 @@ namespace ConsoleApp1
             catch (Exception ex)
             {
                 Console.WriteLine($"erorr: {ex.ToString()}");
-               
+
             }
         }
     }
