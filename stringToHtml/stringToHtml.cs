@@ -13,10 +13,7 @@ namespace ConsoleApp1
         {
 
             var enteredArray = VvodMasiva();
-            //var afterConvert = ConvertToHtml(enteredArray);
-            //WriteToFile(afterConvert);
-            var afterConvert = ConvertToHtmlTable(enteredArray);
-            WriteToFile(afterConvert);
+            ChooseOptionOfOutput(enteredArray);
             Console.ReadKey();
         }
 
@@ -68,6 +65,28 @@ namespace ConsoleApp1
             }
 
         }
+        public static void ChooseOptionOfOutput(string[] enteredArray)
+        {
+            Console.WriteLine("Vvedite 1 - dlya vivoda v formate (List), 2 - dlya vivoda v formate (Table), 3 - dlya vivoda v formate (Json)");
+            string numberChoiseOption = Console.ReadLine();
+           switch(numberChoiseOption)
+            {
+                case "1":
+                    var afterConvert = ConvertToHtml(enteredArray);
+                    WriteToFile(afterConvert);
+                    break;
+                case "2":
+                    var afterConvert1 = ConvertToHtmlTable(enteredArray);
+                    WriteToFile(afterConvert1);
+                    break;
+              
+                default:
+                    Console.WriteLine("Takogo varianta netu");
+                    break;
+            }
+            
+        }
+
         public static string ConvertToHtml(string[] myArray)
         {
             try
