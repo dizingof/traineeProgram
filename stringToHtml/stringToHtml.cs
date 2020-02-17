@@ -92,14 +92,20 @@ namespace ConsoleApp1
             try
             {
                 string strOutPut = string.Empty;
+                string strOutPut1 = string.Empty;
                 foreach (var item in myArray)
                 {
-                    strOutPut += $"<li>Project:</li><li>{item}</li>";
+                    strOutPut += $"<tr><td>{item}</td></tr>";
+                    foreach (var item1 in myArray)
+                    {
+                        strOutPut1 = $"<table border=\"1\"><tr><th>Project</th></tr>{strOutPut}</table>";
+                    }
                 }
-                string strOutputResultTable = $"<table border=\"1\"><tr><th>Project</th></tr><tr><td>{strOutPut}</td></tr><tr><td>Ячейка 3</td></tr><tr><td>Ячейка 3</td></tr></table>";
-                    
-                    Console.WriteLine(strOutputResultTable);
-                return strOutputResultTable;
+                string strOutputResult = strOutPut1;
+
+
+                Console.WriteLine(strOutputResult);
+                return strOutputResult;
             }
             catch (Exception ex)
             {
