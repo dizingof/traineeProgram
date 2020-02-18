@@ -47,7 +47,7 @@ namespace ConsoleApp1
                     {
 
                         Console.Write(myArray[i, j] + "\t" + "\t" + "\t");
-                        
+
 
 
                     }
@@ -66,7 +66,7 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Vvedite 1 - dlya vivoda v formate (List), 2 - dlya vivoda v formate (Table), 3 - dlya vivoda v formate (Json)");
             string numberChoiseOption = Console.ReadLine();
-           switch(numberChoiseOption)
+            switch (numberChoiseOption)
             {
                 case "1":
                     var afterConvert = ConvertToHtml(enteredArray);
@@ -76,12 +76,12 @@ namespace ConsoleApp1
                     var afterConvert1 = ConvertToHtmlTable(enteredArray);
                     WriteToFile(afterConvert1);
                     break;
-              
+
                 default:
                     Console.WriteLine("Takogo varianta netu");
                     break;
             }
-            
+
         }
 
         public static string ConvertToHtml(string[,] myArray)
@@ -89,11 +89,21 @@ namespace ConsoleApp1
             try
             {
                 string strOutPut = string.Empty;
-                foreach (var item in myArray)
+                string strOutPut1 = string.Empty;
+                //foreach (var item in myArray)
+                //{
+                //    strOutPut += $"<li>Project:</li><li>{item}</li>";
+                //}
+                for (int i = 0; i < 2; i++)
                 {
-                    strOutPut += $"<li>Project:</li><li>{item}</li>";
+                    for (int j = 0; j < 3; j++)
+                    {
+                        strOutPut += $"<li>{myArray[i, j]}</li>";
+                    }
+                    strOutPut1 += $"<li>Project:</li>" + strOutPut;
                 }
-                string strOutputResult = $"<ul>{strOutPut}</ul>";
+               
+                string strOutputResult = $"<ul>{strOutPut1}</ul>";
                 Console.WriteLine(strOutputResult);
                 return strOutputResult;
             }
