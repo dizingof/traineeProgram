@@ -16,43 +16,43 @@ namespace ConsoleApp1
             ChooseOptionOfOutput(enteredArray, dlinnaMasivaI);
             Console.ReadKey();
         }
-       
+
 
         public static string[,] VvodMasiva(out int dlinnaMasivaI)
         {
-            
-                Console.Write("vvedite kolichestvo proectov:\t");
-                int elementsCountI = int.Parse(Console.ReadLine());
-                dlinnaMasivaI = elementsCountI;
-                int elementsCountJ = 3;
-                string[,] myArray = new string[elementsCountI, elementsCountJ];
 
-                for (int i = 0; i < elementsCountI; i++)
+            Console.Write("vvedite kolichestvo proectov:\t");
+            int elementsCountI = int.Parse(Console.ReadLine());
+            dlinnaMasivaI = elementsCountI;
+            int elementsCountJ = 3;
+            string[,] myArray = new string[elementsCountI, elementsCountJ];
+
+            for (int i = 0; i < elementsCountI; i++)
+            {
+                Console.WriteLine("VVedite nazvanie minZarabotok maxZarabotok");
+                for (int j = 0; j < elementsCountJ; j++)
                 {
-                    Console.WriteLine("VVedite nazvanie minZarabotok maxZarabotok");
-                    for (int j = 0; j < elementsCountJ; j++)
-                    {
 
-                        myArray[i, j] = Console.ReadLine();
-                        //Console.ReadLine(mat[i, j]);
-                    }
+                    myArray[i, j] = Console.ReadLine();
+                    //Console.ReadLine(mat[i, j]);
                 }
-                Console.WriteLine("Nazvanie proekta      MinZarabotok     MaxZarabotok");
-                for (int i = 0; i < elementsCountI; i++)
+            }
+            Console.WriteLine("Nazvanie proekta      MinZarabotok     MaxZarabotok");
+            for (int i = 0; i < elementsCountI; i++)
+            {
+                Console.WriteLine("\n");
+
+                for (int j = 0; j < elementsCountJ; j++)
                 {
-                    Console.WriteLine("\n");
 
-                    for (int j = 0; j < elementsCountJ; j++)
-                    {
+                    Console.Write(myArray[i, j] + "\t" + "\t" + "\t");
 
-                        Console.Write(myArray[i, j] + "\t" + "\t" + "\t");
-                                       
-                    }
-                    Console.WriteLine("\n");
                 }
-                return (myArray);
-            
-           
+                Console.WriteLine("\n");
+            }
+            return (myArray);
+
+
 
         }
         public static void ChooseOptionOfOutput(string[,] enteredArray, int dlinnaMasivaI)
@@ -66,7 +66,7 @@ namespace ConsoleApp1
                     WriteToFile(afterConvert);
                     break;
                 case "2":
-                    var afterConvert1 = ConvertToHtmlTable(enteredArray);
+                    var afterConvert1 = ConvertToHtmlTable(enteredArray, dlinnaMasivaI);
                     WriteToFile(afterConvert1);
                     break;
 
@@ -83,27 +83,18 @@ namespace ConsoleApp1
             {
                 string strOutPut = string.Empty;
                 string strOutPut1 = string.Empty;
-              
-                //foreach (var item in myArray)
-                //{
-                //    strOutPut += $"<li>Project:</li><li>{item}</li>";
-                //}
+
+
                 for (int i = 0; i < elementsCountI; i++)
                 {
                     strOutPut = null;
                     for (int j = 0; j < 3; j++)
                     {
-                        
                         strOutPut += $"<li>{myArray[i, j]}</li>";
-                        
                     }
-                    
-                        strOutPut1 += $"<li>Project:</li>" + strOutPut;
-                    
-                    
-
+                    strOutPut1 += $"<li>Project:</li>" + strOutPut;
                 }
-               
+
 
                 string strOutputResult = $"<ul>{strOutPut1}</ul>";
                 Console.WriteLine(strOutputResult);
@@ -115,23 +106,27 @@ namespace ConsoleApp1
                 return null;
             }
         }
-        public static string ConvertToHtmlTable(string[,] myArray)
+        public static string ConvertToHtmlTable(string[,] myArray, int elementsCountI)
         {
             try
             {
+                
                 string strOutPut = string.Empty;
                 string strOutPut1 = string.Empty;
-                foreach (var item in myArray)
+                string strOutPut2 = string.Empty;
+                string strOutPut3 = string.Empty;
+                for (int i = 0; i < elementsCountI; i++)
                 {
-                    strOutPut += $"<tr><td>{item}</td></tr>";
-                    foreach (var item1 in myArray)
+                    strOutPut = null;
+                    for (int j = 0; j < 3; j++)
                     {
-                        strOutPut1 = $"<table border=\"1\"><tr><th>Project</th></tr>{strOutPut}</table>";
+                        strOutPut += $"<td>{myArray[i, j]}</td>";
                     }
+                    strOutPut1 += $"<tr>{strOutPut}</tr>";
                 }
-                string strOutputResult = strOutPut1;
-
-
+                strOutPut2 = $"<td>Project Name</td><td>MinZarabotok</td><td>MaxZarabotok</td>{strOutPut1}</table>";
+                strOutPut3 = $"<table border=\"1\">{strOutPut2}</table>";
+                string strOutputResult = strOutPut3;
                 Console.WriteLine(strOutputResult);
                 return strOutputResult;
             }
