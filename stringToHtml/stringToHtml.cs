@@ -24,17 +24,20 @@ namespace ConsoleApp1
             Console.Write("vvedite kolichestvo proectov:\t");
             int elementsCountI = int.Parse(Console.ReadLine());
             dlinnaMasivaI = elementsCountI;
-            int elementsCountJ = 3;
+            int elementsCountJ = 13;
             string[,] myArray = new string[elementsCountI, elementsCountJ];
 
             for (int i = 0; i < elementsCountI; i++)
             {
-                Console.WriteLine("VVedite nazvanie minZarabotok maxZarabotok");
+                Console.WriteLine("VVedite nazvanie proekta");
                 for (int j = 0; j < elementsCountJ; j++)
                 {
-
                     myArray[i, j] = Console.ReadLine();
-                    //Console.ReadLine(mat[i, j]);
+                    if (j < 12)
+                    {
+                        Console.WriteLine($"Month {j + 1}");
+                    }
+                    
                 }
             }
             Console.WriteLine("Nazvanie proekta      MinZarabotok     MaxZarabotok");
@@ -88,7 +91,7 @@ namespace ConsoleApp1
                 for (int i = 0; i < elementsCountI; i++)
                 {
                     strOutPut = null;
-                    for (int j = 0; j < 3; j++)
+                    for (int j = 0; j < 13; j++)
                     {
                         strOutPut += $"<li>{myArray[i, j]}</li>";
                     }
@@ -118,13 +121,13 @@ namespace ConsoleApp1
                 for (int i = 0; i < elementsCountI; i++)
                 {
                     strOutPut = null;
-                    for (int j = 0; j < 3; j++)
+                    for (int j = 0; j < 13; j++)
                     {
                         strOutPut += $"<td>{myArray[i, j]}</td>";
                     }
                     strOutPut1 += $"<tr>{strOutPut}</tr>";
                 }
-                strOutPut2 = $"<td>Project Name</td><td>MinZarabotok</td><td>MaxZarabotok</td>{strOutPut1}</table>";
+                strOutPut2 = $"<td>Project Name</td><td>January</td><td>February</td><td>March</td><td>April</td><td>May</td><td>June</td><td>July</td><td>August</td><td>September</td><td>October</td><td>November</td><td>December</td>{strOutPut1}</table>";
                 strOutPut3 = $"<table border=\"1\">{strOutPut2}</table>";
                 string strOutputResult = strOutPut3;
                 Console.WriteLine(strOutputResult);
