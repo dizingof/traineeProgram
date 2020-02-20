@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsoleApp1
 {
@@ -12,15 +14,18 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
+            ZapuskVsehMetodov();
+            Console.ReadKey();
+        }
+
+        public static void ZapuskVsehMetodov()
+        {
             var enteredArray = VvodMasiva(out int dlinnaMasivaI);
             var newArr = ResizeConvertOldArrayToInt(enteredArray, dlinnaMasivaI);
             SearchMinElementInNewArr(newArr, dlinnaMasivaI);
             SearchMaxElementInNewArr(newArr, dlinnaMasivaI);
             ChooseOptionOfOutput(enteredArray, dlinnaMasivaI);
-            Console.ReadKey();
         }
-
-
         public static string[,] VvodMasiva(out int dlinnaMasivaI)
         {
 
@@ -71,12 +76,19 @@ namespace ConsoleApp1
                 case "1":
                     var afterConvert = ConvertToHtml(enteredArray, dlinnaMasivaI);
                     WriteToFile(afterConvert);
+                    Stop();
+                    ZapuskVsehMetodov();
                     break;
                 case "2":
                     var afterConvert1 = ConvertToHtmlTable(enteredArray, dlinnaMasivaI);
                     WriteToFile(afterConvert1);
+                    Stop();
+                    ZapuskVsehMetodov();
                     break;
-
+                case "3":
+                    
+                    break;
+                    
                 default:
                     Console.WriteLine("Takogo varianta netu");
                     break;
@@ -200,7 +212,7 @@ namespace ConsoleApp1
                         min = newArr[i, j];
                     }
                 }
-                Console.WriteLine($"MAX =  {min}");
+                Console.WriteLine($"MIN =  {min}");
             }
             
 
@@ -212,11 +224,34 @@ namespace ConsoleApp1
                 StreamWriter sw = new StreamWriter(@"C:\roma\ListProject.html");
                 sw.WriteLine(strOutputResult);
                 sw.Close();
+                
+
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"erorr: {ex.ToString()}");
 
+            }
+        }
+        public static void Stop()
+        {
+            Console.WriteLine("hotite prodolgit nagmite \"y\" esli hotite viiti nagmite \"q\"?");
+            var sostoyanie = Console.ReadLine();
+            if (sostoyanie == "y")
+            {
+                ZapuskVsehMetodov();
+
+            }
+            else if (sostoyanie == "q")
+            {
+                Environment.Exit(0);
+
+            }
+            else
+            {
+                Console.WriteLine("Vvedite Korektnii varint");
+                Stop();
             }
         }
     }
