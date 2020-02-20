@@ -24,7 +24,7 @@ namespace ConsoleApp1
             Console.Write("vvedite kolichestvo proectov:\t");
             int elementsCountI = int.Parse(Console.ReadLine());
             dlinnaMasivaI = elementsCountI;
-            int elementsCountJ = 13;
+            int elementsCountJ = 4;
             string[,] myArray = new string[elementsCountI, elementsCountJ];
 
             for (int i = 0; i < elementsCountI; i++)
@@ -33,7 +33,7 @@ namespace ConsoleApp1
                 for (int j = 0; j < elementsCountJ; j++)
                 {
                     myArray[i, j] = Console.ReadLine();
-                    if (j < 12)
+                    if (j < 3)
                     {
                         Console.WriteLine($"Month {j + 1}");
                     }
@@ -91,7 +91,7 @@ namespace ConsoleApp1
                 for (int i = 0; i < elementsCountI; i++)
                 {
                     strOutPut = null;
-                    for (int j = 0; j < 13; j++)
+                    for (int j = 0; j < 4; j++)
                     {
                         strOutPut += $"<li>{myArray[i, j]}</li>";
                     }
@@ -121,13 +121,13 @@ namespace ConsoleApp1
                 for (int i = 0; i < elementsCountI; i++)
                 {
                     strOutPut = null;
-                    for (int j = 0; j < 13; j++)
+                    for (int j = 0; j < 4; j++)
                     {
                         strOutPut += $"<td>{myArray[i, j]}</td>";
                     }
                     strOutPut1 += $"<tr>{strOutPut}</tr>";
                 }
-                strOutPut2 = $"<td>Project Name</td><td>January</td><td>February</td><td>March</td><td>April</td><td>May</td><td>June</td><td>July</td><td>August</td><td>September</td><td>October</td><td>November</td><td>December</td>{strOutPut1}</table>";
+                strOutPut2 = $"<td>Project Name</td><td>Month1</td><td>Month2</td><td>Month3</td>{strOutPut1}</table>";
                 strOutPut3 = $"<table border=\"1\">{strOutPut2}</table>";
                 string strOutputResult = strOutPut3;
                 Console.WriteLine(strOutputResult);
