@@ -13,6 +13,9 @@ namespace ConsoleApp1
         {
 
             var enteredArray = VvodMasiva(out int dlinnaMasivaI);
+            var newArr = ResizeConvertOldArrayToInt(enteredArray, dlinnaMasivaI);
+            SearchMinElementInNewArr(newArr, dlinnaMasivaI);
+            SearchMaxElementInNewArr(newArr, dlinnaMasivaI);
             ChooseOptionOfOutput(enteredArray, dlinnaMasivaI);
             Console.ReadKey();
         }
@@ -37,10 +40,10 @@ namespace ConsoleApp1
                     {
                         Console.WriteLine($"Month {j + 1}");
                     }
-                    
+
                 }
             }
-            Console.WriteLine("Nazvanie proekta      MinZarabotok     MaxZarabotok");
+            Console.WriteLine("Nazvanie proekta      Month1     Month2      Month3");
             for (int i = 0; i < elementsCountI; i++)
             {
                 Console.WriteLine("\n");
@@ -60,6 +63,7 @@ namespace ConsoleApp1
         }
         public static void ChooseOptionOfOutput(string[,] enteredArray, int dlinnaMasivaI)
         {
+            Console.WriteLine();
             Console.WriteLine("Vvedite 1 - dlya vivoda v formate (List), 2 - dlya vivoda v formate (Table), 3 - dlya vivoda v formate (Json)");
             string numberChoiseOption = Console.ReadLine();
             switch (numberChoiseOption)
@@ -113,7 +117,7 @@ namespace ConsoleApp1
         {
             try
             {
-                
+
                 string strOutPut = string.Empty;
                 string strOutPut1 = string.Empty;
                 string strOutPut2 = string.Empty;
@@ -138,6 +142,68 @@ namespace ConsoleApp1
                 Console.WriteLine($"erorr: {ex.ToString()}");
                 return null;
             }
+        }
+
+        public static int[,] ResizeConvertOldArrayToInt(string[,] myArray, int elementsCountI)
+        {
+            string strOutPut = string.Empty;
+            string strOutPut1 = string.Empty;
+
+
+            var newArr = new int[elementsCountI, 3];
+            for (int i = 0; i < elementsCountI; i++)
+            {
+                Console.WriteLine("\n");
+                for (var j = 0; j < 3; j++)
+                {
+                    newArr[i, j] = int.Parse(myArray[i, j + 1]);
+                    Console.Write(newArr[i, j]);
+
+                }
+
+            }
+            return (newArr);
+        }
+        public static void SearchMaxElementInNewArr(int[,] newArr, int elementsCountI)
+        {
+            int max;
+
+            for (int i = 0; i < elementsCountI; i++)
+            {
+                Console.WriteLine("\n");
+                max = 0;
+                for (int j = 0; j < 3; j++)
+                {
+                    if (newArr[i, j] > max)
+                    {
+                        max = newArr[i, j];
+                    }
+                }
+                Console.Write($"MAX = {max}");
+
+            }
+
+        }
+        public static void SearchMinElementInNewArr(int[,] newArr, int elementsCountI)
+        {
+            Console.WriteLine("\n");
+            int min;
+
+            for (int i = 0; i < elementsCountI; i++)
+            {
+                Console.WriteLine("\n");
+                min = newArr[0, 0];
+                for (int j = 0; j < 3; j++)
+                {
+                    if (newArr[i, j] < min)
+                    {
+                        min = newArr[i, j];
+                    }
+                }
+                Console.WriteLine($"MAX =  {min}");
+            }
+            
+
         }
         public static void WriteToFile(string strOutputResult)
         {
