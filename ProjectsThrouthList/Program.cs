@@ -11,6 +11,7 @@ namespace ProjectsThrouthList
     {
         static void Main(string[] args)
         {
+            
             Console.Write("vvedite kolichestvo incomes:\t");
             int incomeCountI = int.Parse(Console.ReadLine());
             List<Income> incomes = new List<Income>();
