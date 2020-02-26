@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "СalculationOfProjectsThrou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectsThrouthList", "ProjectsThrouthList\ProjectsThrouthList.csproj", "{12ED26CB-5560-4506-88E7-8C3FF7C8C6CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConveerAvtoOOP", "ConveerAvtoOOP\ConveerAvtoOOP.csproj", "{9CD992A6-2454-41EF-9B48-C710000900A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{12ED26CB-5560-4506-88E7-8C3FF7C8C6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12ED26CB-5560-4506-88E7-8C3FF7C8C6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12ED26CB-5560-4506-88E7-8C3FF7C8C6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD992A6-2454-41EF-9B48-C710000900A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD992A6-2454-41EF-9B48-C710000900A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD992A6-2454-41EF-9B48-C710000900A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD992A6-2454-41EF-9B48-C710000900A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
