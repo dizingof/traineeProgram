@@ -1,26 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsoleApp1
 {
     class Program
     {
+        private readonly int kolichestvoMesyacev = 4;
         static void Main(string[] args)
         {
-
             ZapuskVsehMetodov();
             Console.ReadKey();
         }
 
         public static void ZapuskVsehMetodov()
         {
+
             var enteredArray = VvodMasiva(out int dlinnaMasivaI);
+          
             var newArr = ResizeConvertOldArrayToInt(enteredArray, dlinnaMasivaI);
             SearchMinElementInNewArr(newArr, dlinnaMasivaI);
             SearchMaxElementInNewArr(newArr, dlinnaMasivaI);
@@ -61,7 +57,7 @@ namespace ConsoleApp1
                 }
                 Console.WriteLine("\n");
             }
-            return (myArray);
+            return myArray;
 
 
 
@@ -75,15 +71,16 @@ namespace ConsoleApp1
             {
                 case "1":
                     var afterConvert = ConvertToHtml(enteredArray, dlinnaMasivaI);
+                    Console.WriteLine(afterConvert.Length);
                     WriteToFile(afterConvert);
                     Stop();
-                    ZapuskVsehMetodov();
+                   
                     break;
                 case "2":
                     var afterConvert1 = ConvertToHtmlTable(enteredArray, dlinnaMasivaI);
                     WriteToFile(afterConvert1);
                     Stop();
-                    ZapuskVsehMetodov();
+                    
                     break;
                 case "3":
                     
@@ -100,13 +97,15 @@ namespace ConsoleApp1
         {
             try
             {
+                //throw new Exception("text oshibki");
                 string strOutPut = string.Empty;
                 string strOutPut1 = string.Empty;
 
 
                 for (int i = 0; i < elementsCountI; i++)
                 {
-                    strOutPut = null;
+                    strOutPut = string.Empty;
+                    Console.WriteLine(strOutPut.Length);
                     for (int j = 0; j < 4; j++)
                     {
                         strOutPut += $"<li>{myArray[i, j]}</li>";
@@ -121,8 +120,8 @@ namespace ConsoleApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"erorr: {ex.ToString()}");
-                return null;
+                Console.WriteLine($"erorr: {ex.Message}");
+                return string.Empty;
             }
         }
         public static string ConvertToHtmlTable(string[,] myArray, int elementsCountI)
@@ -199,16 +198,17 @@ namespace ConsoleApp1
         public static void SearchMinElementInNewArr(int[,] newArr, int elementsCountI)
         {
             Console.WriteLine("\n");
-            int min;
+            int min = -1;
 
             for (int i = 0; i < elementsCountI; i++)
             {
                 Console.WriteLine("\n");
-                min = newArr[0, 0];
+               
                 for (int j = 0; j < 3; j++)
                 {
-                    if (newArr[i, j] < min)
+                    if (min== - 1 || newArr[i, j] < min)
                     {
+                        
                         min = newArr[i, j];
                     }
                 }
