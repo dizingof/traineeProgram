@@ -10,8 +10,6 @@ namespace СalculationOfProjectsThroughOOP
     {
         public string ProjectName { get; set; }
         public int Summa { get; set; }
-
-        
-        
+               
     }
 }

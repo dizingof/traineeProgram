@@ -16,21 +16,26 @@ namespace СalculationOfProjectsThroughOOP
 
         private static Income[] VvodIncome()
         {
-            Income[] newIncome = null;
+             
             Console.Write("vvedite kolichestvo incomes:\t");
             int incomeCountI = int.Parse(Console.ReadLine());
+            Income[]  newIncome = new Income[incomeCountI];
             for (int i = 0; i < incomeCountI; i++)
-            {
-                newIncome = new Income[incomeCountI];
-                newIncome[i] = new Income();
-                Console.Write("vvedite Nazvanie proekta:\t");
-                newIncome[i].ProjectName = Console.ReadLine();
-                Console.Write("vvedite Summu project:\t");
-                newIncome[i].Summa = int.Parse(Console.ReadLine());
-
+            {                
+                newIncome[i] = CreateIncome();
             }
            
+            
             return newIncome;
+        }
+        private static Income CreateIncome()
+        {
+            //var income = new Income();
+            //Console.Write("vvedite Nazvanie proekta:\t");
+            //income.ProjectName = Console.ReadLine();
+           // Console.Write("vvedite Summu project:\t");
+           // income.Summa = int.Parse(Console.ReadLine());
+            return new Income() { ProjectName = Console.ReadLine(), Summa = int.Parse(Console.ReadLine()) };
         }
     }
 }

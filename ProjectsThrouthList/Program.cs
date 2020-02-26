@@ -16,7 +16,12 @@ namespace ProjectsThrouthList
             List<Income> incomes = new List<Income>();
             for (int i = 0; i < incomeCountI; i++)
             {
-                incomes.Add(new Income(){ ProjectName = Console.ReadLine(),Summa = int.Parse(Console.ReadLine()) });
+                var income = new Income();
+                Console.Write("vvedite Nazvanie proekta:\t");
+                income.ProjectName = Console.ReadLine();
+                Console.Write("vvedite Summu project:\t");
+                income.Summa = int.Parse(Console.ReadLine());
+                incomes.Add(income);
             }
             foreach(var i in incomes)
             {
