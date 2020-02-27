@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConveerAvtoOOP
 {
-    class PokrasheniiKuzov
+   public class PokrasheniiKuzov
     {
         public string Type { get; set; }
         public string CvetKuzova { get; set; }

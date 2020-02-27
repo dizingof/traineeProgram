@@ -42,7 +42,7 @@ namespace ConveerAvtoOOP
         {
             Car avto = new Car();
             avto.Color = objectPokrasheniiKuzov.CvetKuzova;
-            avto.Kuzov = objectPokrasheniiKuzov.Type;
+            avto.Kuzov = objectPokrasheniiKuzov;
             avto.DvigatelType = objectDvigatel.Type;
             avto.DvigatelMoshnost = objectDvigatel.Сapacity;
             return avto;
@@ -51,7 +51,7 @@ namespace ConveerAvtoOOP
         {
             Console.WriteLine("Vi sobrali avtomobil s takimi parametrami");
             Console.WriteLine($"Cvet vashego avto: {avto.Color}");
-            Console.WriteLine($"Tip kuzova: {avto.Kuzov}");
+            Console.WriteLine($"Tip kuzova: {avto.Kuzov.Type}");
             Console.WriteLine($"Tip Dvigatelya: {avto.DvigatelType}");
             Console.WriteLine($"Moshnost Dvigatelya: {avto.DvigatelMoshnost}");
             Console.ReadKey();
