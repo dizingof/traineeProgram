@@ -25,8 +25,8 @@ namespace ConveerAvtoOOP
         public  PokrasheniiKuzov Pokrasit(Kuzov objectKuzov, Color objectColor)
         {
             PokrasheniiKuzov objectPokrasheniiKuzov = new PokrasheniiKuzov();
-            objectPokrasheniiKuzov.Type = objectKuzov.TypeOfKuzov;
-            objectPokrasheniiKuzov.CvetKuzova = objectColor.Name;
+            objectPokrasheniiKuzov.Type = objectKuzov;
+            objectPokrasheniiKuzov.CvetKuzova = objectColor;
             return objectPokrasheniiKuzov;
         }
         public  Dvigatel ViborDvigatelya()
@@ -41,19 +41,19 @@ namespace ConveerAvtoOOP
         public  Car SozdnieAvto(PokrasheniiKuzov objectPokrasheniiKuzov, Dvigatel objectDvigatel)
         {
             Car avto = new Car();
-            avto.Color = objectPokrasheniiKuzov.CvetKuzova;
+            avto.Color = objectPokrasheniiKuzov;
             avto.Kuzov = objectPokrasheniiKuzov;
-            avto.DvigatelType = objectDvigatel.Type;
-            avto.DvigatelMoshnost = objectDvigatel.Сapacity;
+            avto.DvigatelType = objectDvigatel;
+            avto.DvigatelMoshnost = objectDvigatel;
             return avto;
         }
         public  void VivodAvtoNaEkran(Car avto)
         {
             Console.WriteLine("Vi sobrali avtomobil s takimi parametrami");
-            Console.WriteLine($"Cvet vashego avto: {avto.Color}");
-            Console.WriteLine($"Tip kuzova: {avto.Kuzov.Type}");
-            Console.WriteLine($"Tip Dvigatelya: {avto.DvigatelType}");
-            Console.WriteLine($"Moshnost Dvigatelya: {avto.DvigatelMoshnost}");
+            Console.WriteLine($"Cvet vashego avto: {avto.Kuzov.CvetKuzova.Name}");
+            Console.WriteLine($"Tip kuzova: {avto.Kuzov.Type.TypeOfKuzov}");
+            Console.WriteLine($"Tip Dvigatelya: {avto.DvigatelType.Type}");
+            Console.WriteLine($"Moshnost Dvigatelya: {avto.DvigatelMoshnost.Сapacity}");
             Console.ReadKey();
         }
     }

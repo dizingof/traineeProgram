@@ -8,7 +8,7 @@ namespace ConveerAvtoOOP
 {
    public class PokrasheniiKuzov
     {
-        public string Type { get; set; }
-        public string CvetKuzova { get; set; }
+        public Kuzov Type { get; set; }
+        public Color CvetKuzova { get; set; }
     }
 }
