@@ -8,7 +8,8 @@ namespace ConveerAvtoOOP
 {
     public class Car
     {
-        public string Dvigatel { get; set; }
+        public int DvigatelMoshnost { get; set; }
+        public string DvigatelType { get; set; }
         public string Color { get; set; }
         public string Kuzov { get; set; }
 

@@ -47,6 +47,7 @@
     <Compile Include="Conveer.cs" />
     <Compile Include="Dvigatel.cs" />
     <Compile Include="Kuzov.cs" />
+    <Compile Include="PokrasheniiKuzov.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

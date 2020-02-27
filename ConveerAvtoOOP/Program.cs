@@ -10,6 +10,12 @@ namespace ConveerAvtoOOP
     {
         static void Main(string[] args)
         {
+            Conveer objectConveer = new Conveer();
+           
+            
+            
+            objectConveer.VivodAvtoNaEkran(objectConveer.SozdnieAvto(objectConveer.Pokrasit(objectConveer.ViborKuzova(), objectConveer.ViborColor()), objectConveer.ViborDvigatelya()));
         }
+        
     }
 }
