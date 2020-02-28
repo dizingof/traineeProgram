@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CD992A6-2454-41EF-9B48-C710000900A1}</ProjectGuid>
+    <ProjectGuid>{19F3A09C-F61B-4457-900D-7FD5B9F6A164}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConveerAvtoOOP</RootNamespace>
-    <AssemblyName>ConveerAvtoOOP</AssemblyName>
+    <RootNamespace>ConveerAvtoV1</RootNamespace>
+    <AssemblyName>ConveerAvtoV1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -43,10 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="Color.cs" />
     <Compile Include="Conveer.cs" />
-    <Compile Include="Dvigatel.cs" />
+    <Compile Include="Kolesa.cs" />
     <Compile Include="Kuzov.cs" />
+    <Compile Include="Motor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

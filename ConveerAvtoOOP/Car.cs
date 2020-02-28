@@ -10,8 +10,8 @@ namespace ConveerAvtoOOP
     {
         public Dvigatel DvigatelMoshnost { get; set; }
         public Dvigatel DvigatelType { get; set; }
-        public PokrasheniiKuzov Color { get; set; }
-        public PokrasheniiKuzov Kuzov { get; set; }
+        public Kuzov TypeOfKuzov { get; set; }
+        public Kuzov CvetKuzova { get; set; }
 
     }
 }

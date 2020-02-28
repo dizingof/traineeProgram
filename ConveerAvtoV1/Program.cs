@@ -4,20 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConveerAvtoOOP
+namespace ConveerAvtoV1
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            Conveer ConveerLegkovikhAvto = new Conveer();
-            ConveerLegkovikhAvto.SozdanieAvto();
+            Conveer myConveer = new Conveer();
+            myConveer.SozdanieAvto();
             Console.ReadKey();
-
-
-
         }
-        
     }
 }

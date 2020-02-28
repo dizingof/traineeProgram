@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectsThrouthList", "Proj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConveerAvtoOOP", "ConveerAvtoOOP\ConveerAvtoOOP.csproj", "{9CD992A6-2454-41EF-9B48-C710000900A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConveerAvtoV1", "ConveerAvtoV1\ConveerAvtoV1.csproj", "{19F3A09C-F61B-4457-900D-7FD5B9F6A164}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9CD992A6-2454-41EF-9B48-C710000900A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CD992A6-2454-41EF-9B48-C710000900A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CD992A6-2454-41EF-9B48-C710000900A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F3A09C-F61B-4457-900D-7FD5B9F6A164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F3A09C-F61B-4457-900D-7FD5B9F6A164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F3A09C-F61B-4457-900D-7FD5B9F6A164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F3A09C-F61B-4457-900D-7FD5B9F6A164}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,5 +11,17 @@ namespace ConveerAvtoOOP
         
         public string Type { get; set; }
         public int Сapacity { get; set; }
+        public string ViborTypeDvigatelya()
+        {
+            Console.WriteLine("Vvedite Tip Dvigatelya");
+            Type = Console.ReadLine();
+            return Type;
+        }
+        public int ViborCapacityDvigatelya()
+        {
+            Console.WriteLine("Vvedite Сapacity Dvigatelya");
+            Сapacity = int.Parse(Console.ReadLine());
+            return Сapacity;
+        }
     }
 }
