@@ -22,6 +22,12 @@ namespace NasledovaniePolimorfizm
             Console.WriteLine("Base car Razgonyaetsya");
         }
 
+        public BaseCar(string kuzov1, string kolesa1, string dvigatel1) 
+        {
+            this.kuzov = kuzov1;
+            this.kolesa = kolesa1;
+            this.dvigatel = dvigatel1;
+        }
 
     }
 }
