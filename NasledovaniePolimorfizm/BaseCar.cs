@@ -8,9 +8,17 @@ namespace NasledovaniePolimorfizm
 {
     class BaseCar
     {
-        public string kuzov;
-        public string dvigatel;
-        public string kolesa;
+        private string kuzov;
+        private string dvigatel;
+        private string kolesa;
+
+
+        public BaseCar(string kuzov1, string kolesa1, string dvigatel1)
+        {
+            kuzov = kuzov1;
+            kolesa = kolesa1;
+            dvigatel = dvigatel1;
+        }
 
         public void Dvigetsya()
         {
@@ -21,13 +29,12 @@ namespace NasledovaniePolimorfizm
         {
             Console.WriteLine("Base car Razgonyaetsya");
         }
-
-        public BaseCar(string kuzov1, string kolesa1, string dvigatel1) 
+        protected string GetCarInfo()
         {
-            this.kuzov = kuzov1;
-            this.kolesa = kolesa1;
-            this.dvigatel = dvigatel1;
+            Console.WriteLine($"{kuzov}, {dvigatel}, {kolesa}");
+            return $"{kuzov}, {dvigatel}, {kolesa}";
         }
+       
 
     }
 }
