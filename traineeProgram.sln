@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConveerAvtoV1", "ConveerAvt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeregruzkaMetodov", "PeregruzkaMetodov\PeregruzkaMetodov.csproj", "{71882F66-D8D1-4375-ABA9-C2B8A6338AE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nasledovanie", "Nasledovanie\Nasledovanie.csproj", "{6B9B5E50-6EFD-4BAF-840D-3524D2A46DCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasledovaniePolimorfizm", "NasledovaniePolimorfizm\NasledovaniePolimorfizm.csproj", "{E5145A0F-379E-4DA2-BD5C-29848D89A570}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{71882F66-D8D1-4375-ABA9-C2B8A6338AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71882F66-D8D1-4375-ABA9-C2B8A6338AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71882F66-D8D1-4375-ABA9-C2B8A6338AE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B9B5E50-6EFD-4BAF-840D-3524D2A46DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B9B5E50-6EFD-4BAF-840D-3524D2A46DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B9B5E50-6EFD-4BAF-840D-3524D2A46DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B9B5E50-6EFD-4BAF-840D-3524D2A46DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5145A0F-379E-4DA2-BD5C-29848D89A570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5145A0F-379E-4DA2-BD5C-29848D89A570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5145A0F-379E-4DA2-BD5C-29848D89A570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5145A0F-379E-4DA2-BD5C-29848D89A570}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nasledovanie
 {
-    class baseHuman
+    class BaseHuman
     {
         public string golova;
         public string ruki;
@@ -21,7 +21,7 @@ namespace Nasledovanie
             Console.WriteLine("baseHuman upotreblyaet edu");
         }
 
-        public baseHuman(string golova, string ruki, string nogi)
+        public BaseHuman(string golova, string ruki, string nogi)
         {
             this.golova = golova;
             this.ruki = ruki;
