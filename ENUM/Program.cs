@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConveerAvtoV1
+namespace ENUM
 {
     class Program
     {
         static void Main(string[] args)
         {
-           
-            Conveer myConveer = new Conveer();
-            myConveer.SozdanieAvto();
-            Console.ReadKey();
 
         }
     }
