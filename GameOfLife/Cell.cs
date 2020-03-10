@@ -8,9 +8,10 @@ namespace GameOfLife
 {
     class Cell
     {
-        bool sostoyanie;
-        int X;
-        int Y;
+        public bool Sostoyanie { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public Cell[] Sosedi { get; set; }
 
         public Cell(int x, int y)
         {
@@ -19,28 +20,5 @@ namespace GameOfLife
         }
     }
 
-    public class Cell
-    {
-        public Position Position { get; private set; }
-        public bool IsAlive { get; set; }
-        public Cell[] Neighbours { get; set; }
-
-        public Cell(Position position, bool isAlive = false)
-        {
-            Position = position;
-            IsAlive = isAlive;
-        }
-    }
-
-    public class Position
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-
-        public Position(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-    }
+     
 }

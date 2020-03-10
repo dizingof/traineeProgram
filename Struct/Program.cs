@@ -32,5 +32,6 @@ namespace Struct
             X = x;
             Y = y;
         }
+       
     }
 }

@@ -8,18 +8,9 @@ namespace GameOfLife
 {
     class Grid
     {
-        int dlina = 10;
-        int shirina = 10;
+        private Cell[,] space;
+        public int dlina = 10;
+        public int shirina = 10;
     }
-    public class Universe
-    {
-        private Cell[,] _space;
-        private readonly int _spaceMeasurement;
-
-        public Universe(int spaceMeasurement)
-        {
-            _spaceMeasurement = spaceMeasurement;
-            SetEmptySpace();
-        }
-    }
+   
 }

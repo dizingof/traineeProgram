@@ -16,6 +16,7 @@ namespace ConveerAvtoV1
             Console.WriteLine("Vvedite vid koles");
             myKolesa.VidKoles = Console.ReadLine();
             Kuzov myKuzuv = new Kuzov();
+            //Type b = myKuzuv.GetType();
             Console.WriteLine("Vvedite cvet kuzova");
             myKuzuv.cvetKuzova = Console.ReadLine();
             Console.WriteLine("Vvedite tip kuzova");
