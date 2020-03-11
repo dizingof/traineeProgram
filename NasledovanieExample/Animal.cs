@@ -14,17 +14,10 @@ namespace NasledovanieExample
 
         public virtual void Display()
         {
-            Console.WriteLine(Vozrast);
+            Console.WriteLine("animal");
         }
 
 
     }
-    class Cat:Animal
-    {
-        private int Ves { get; set; }
-        public override void Display()
-        {
-            Console.WriteLine(Ves);
-        }
-    }
+   
 }
