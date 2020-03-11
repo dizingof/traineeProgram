@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameOfLife
+namespace NasledovanieExample
 {
-    class Grid
+    class Program
     {
-        private Cell[,] space;
-        public Cell[,] mass = new Cell[50, 50];
-
-
-       
-
-        
+        static void Main(string[] args)
+        {
+        }
     }
 }
