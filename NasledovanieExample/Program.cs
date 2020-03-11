@@ -26,6 +26,9 @@ namespace NasledovanieExample
             Cat cat2 = (Cat)animal1; //downcast
             //animal.Color;
 
+            //замещение у не виртуальных методов - не полиморфизм
+            // переопределение у виртуальных методов - полиморфизм
+
 
 
 
