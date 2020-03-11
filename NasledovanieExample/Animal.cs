@@ -16,6 +16,8 @@ namespace NasledovanieExample
         {
             Console.WriteLine(Vozrast);
         }
+
+
     }
     class Cat:Animal
     {
