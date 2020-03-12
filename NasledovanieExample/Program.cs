@@ -31,10 +31,12 @@ namespace NasledovanieExample
 
 
 
-
+            Class1 cl = new Class1();
+            Class1.field3 = 2; //static
 
             Console.ReadLine();
 
+            
 
         }
     }
