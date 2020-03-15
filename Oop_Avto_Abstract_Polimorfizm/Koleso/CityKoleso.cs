@@ -8,10 +8,10 @@ namespace Oop_Avto_Abstract_Polimorfizm.Koleso
 {
     public class CityKoleso : BaseKoleso
     {
-        public CityKoleso(string nazvanie, int diametr)
+        public int MaxNagruzka { get; set; }
+        public CityKoleso(int maxnagruzka, string nazvanie, int diametr) :base(nazvanie, diametr)
         {
-            Nazvanie = nazvanie;
-            Diametr = diametr;
+            MaxNagruzka = maxnagruzka;
         }
         public override void Spinning()
         {

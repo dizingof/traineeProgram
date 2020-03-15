@@ -10,7 +10,14 @@ namespace Oop_Avto_Abstract_Polimorfizm
     {
         public string Nazvanie { get; set; }
         public int Diametr { get; set; }
-      
+        public BaseKoleso(string nazvanie, int diametr)
+        {
+            Nazvanie = nazvanie;
+            Diametr = diametr;
+        }
+
+
+
         public abstract void Spinning();
     }
 }
