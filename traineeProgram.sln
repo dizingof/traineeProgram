@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stringToHtml", "stringToHtml\stringToHtml.csproj", "{FFF8496C-E682-4A32-BE21-48A5C6363476}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife", "..\..\..\..\Downloads\Om.GameOfLife\GameOfLife\GameOfLife.csproj", "{71DC91A9-E232-420E-A3B7-6BCE6FD61F2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasledovanieExample", "NasledovanieExample\NasledovanieExample.csproj", "{D6FBF97B-E479-4BB2-A62C-302D9A9B5C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oop_Avto_Abstract_Polimorfizm", "Oop_Avto_Abstract_Polimorfizm\Oop_Avto_Abstract_Polimorfizm.csproj", "{BFB56ABC-671C-4930-BDF4-19ECF52450C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{D6FBF97B-E479-4BB2-A62C-302D9A9B5C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6FBF97B-E479-4BB2-A62C-302D9A9B5C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6FBF97B-E479-4BB2-A62C-302D9A9B5C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB56ABC-671C-4930-BDF4-19ECF52450C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB56ABC-671C-4930-BDF4-19ECF52450C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB56ABC-671C-4930-BDF4-19ECF52450C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB56ABC-671C-4930-BDF4-19ECF52450C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
