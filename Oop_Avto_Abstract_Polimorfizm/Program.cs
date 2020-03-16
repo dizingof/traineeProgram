@@ -11,7 +11,8 @@ namespace Oop_Avto_Abstract_Polimorfizm
     {
         static void Main(string[] args)
         {
-            var a = new Conveer();
+            ConveerKoles conveerKoles = new ConveerKoles();
+            conveerKoles.ViborTipaKolesa();
         }
     }
 }
