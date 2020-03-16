@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Oop_Avto_Abstract_Polimorfizm.Car
 {
-    abstract class BaseCar
+    abstract public class BaseCar
     {
-        
+        public abstract void Drive();
     }
 }

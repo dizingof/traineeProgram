@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="Car\BaseCar.cs" />
     <Compile Include="Car\CityCar.cs" />
+    <Compile Include="Car\EnumTipAvto.cs" />
     <Compile Include="Car\SportCar.cs" />
     <Compile Include="Car\VnedorognikCar.cs" />
+    <Compile Include="Conveers\Conveer.cs" />
     <Compile Include="Koleso\BaseKoleso.cs" />
     <Compile Include="Koleso\CityKoleso.cs" />
     <Compile Include="Koleso\SportKoleso.cs" />
@@ -54,16 +56,13 @@
     <Compile Include="Kuzov\BaseKuzov.cs" />
     <Compile Include="Kuzov\Hetchback.cs" />
     <Compile Include="Kuzov\Sedan.cs" />
-    <Compile Include="Kuzov\Universal.cs" />
+    <Compile Include="Kuzov\VnedorognikKuzov.cs" />
     <Compile Include="Motor\BaseMotor.cs" />
     <Compile Include="Motor\SportMotor.cs" />
     <Compile Include="Motor\StandartMotor.cs" />
     <Compile Include="Motor\VnedorognikMotor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steklo\BaseSteklo.cs" />
-    <Compile Include="Steklo\CitySteklo.cs" />
-    <Compile Include="Steklo\SportSteklo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

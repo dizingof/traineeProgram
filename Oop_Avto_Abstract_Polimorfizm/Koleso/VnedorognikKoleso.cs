@@ -8,10 +8,11 @@ namespace Oop_Avto_Abstract_Polimorfizm.Koleso
 {
     class VnedorognikKoleso:BaseKoleso
     {
-        public VnedorognikKoleso(string nazvanie, int diametr) : base(nazvanie, diametr)
+        public int MaxNagruzka { get; set; }
+        public VnedorognikKoleso(string nazvanie, int diametr, int maxnagruzka) : base(nazvanie, diametr)
         {
-            Nazvanie = nazvanie;
-            Diametr = diametr;
+            MaxNagruzka = maxnagruzka;
+          
         }
         public override void Spinning()
         {

@@ -8,8 +8,8 @@ namespace Oop_Avto_Abstract_Polimorfizm
 {
     abstract public class BaseKoleso
     {
-        public string Nazvanie { get; set; }
-        public int Diametr { get; set; }
+        private string Nazvanie { get; set; }
+        private int Diametr { get; set; }
         public BaseKoleso(string nazvanie, int diametr)
         {
             Nazvanie = nazvanie;

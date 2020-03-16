@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oop_Avto_Abstract_Polimorfizm.Steklo
+namespace Oop_Avto_Abstract_Polimorfizm.Car
 {
-    class SportSteklo:BaseSteklo
+    enum TipCar
     {
+        CityCar = 1,
+        SportCar = 2,
+        VnedorognikCar = 3
     }
 }

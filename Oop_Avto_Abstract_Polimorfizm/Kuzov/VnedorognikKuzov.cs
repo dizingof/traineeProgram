@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Oop_Avto_Abstract_Polimorfizm.Kuzov
 {
-    public class Sedan:BaseKuzov
+    class VnedorognikKuzov:BaseKuzov
     {
-        private string Bagajnik { get; set; }
+        private string Zashita { get; set; }
 
-        public Sedan(string bagajnik, int ves, string cvet) : base(ves, cvet)
+        public VnedorognikKuzov(string zashita, int ves, string cvet) : base(ves, cvet)
         {
-            Bagajnik = bagajnik;
+            Zashita = zashita;
         }
 
         public override void CloseDoor()
         {
-            Console.WriteLine("Open door Sedan");
+            Console.WriteLine("Open door Vnedorognik");
         }
     }
 }
