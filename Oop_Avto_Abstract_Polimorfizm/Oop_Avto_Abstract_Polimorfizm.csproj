@@ -51,6 +51,7 @@
     <Compile Include="Conveers\Conveer.cs" />
     <Compile Include="Conveers\ConveerDvigatelei.cs" />
     <Compile Include="Conveers\ConveerKoles.cs" />
+    <Compile Include="Conveers\ConveerKuzovov.cs" />
     <Compile Include="Koleso\BaseKoleso.cs" />
     <Compile Include="Koleso\CityKoleso.cs" />
     <Compile Include="Koleso\SportKoleso.cs" />

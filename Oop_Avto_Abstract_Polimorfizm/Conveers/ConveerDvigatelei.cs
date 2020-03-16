@@ -9,7 +9,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
 {
     class ConveerDvigatelei
     {
-        public void ViborTipaKolesa()
+        public void ViborTipaDvigatelya()
         {
             Console.WriteLine("Vvedite Tip Dvigatelya: 1 - SportDvigatel, 2 - StandartDvigatel, 3 - VnedorognikDvigatel");
 
@@ -60,8 +60,8 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
 
         public VnedorognikMotor CreateVnedorognikMotor()
         {
-            Console.WriteLine("Vvedite Marku Elektronnogo Zajiganiya");
-            string elektronnoeZagiganie = Console.ReadLine();
+            Console.WriteLine("Vvedite Tip polnogo privoda");
+            string polniiPrivod = Console.ReadLine();
             Console.WriteLine("Vvedite Moshnost Dvigatelya");
             int moshnost = int.Parse(Console.ReadLine());
             Console.WriteLine("Vvedite Ves Dvigatelya");
@@ -69,7 +69,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
             Console.WriteLine("Vvedite Tip Topliva");
             string tipTopliva = Console.ReadLine();
 
-            VnedorognikMotor vnedorognikMotor = new VnedorognikMotor(string polniiPrivod, int moshnost, int ves, string tipTopliva);
+            VnedorognikMotor vnedorognikMotor = new VnedorognikMotor(polniiPrivod, moshnost, ves, tipTopliva);
             return vnedorognikMotor;
         }
     }

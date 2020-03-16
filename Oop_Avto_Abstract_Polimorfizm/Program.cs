@@ -13,6 +13,10 @@ namespace Oop_Avto_Abstract_Polimorfizm
         {
             ConveerKoles conveerKoles = new ConveerKoles();
             conveerKoles.ViborTipaKolesa();
+            ConveerDvigatelei conveerDvigatelei = new ConveerDvigatelei();
+            conveerDvigatelei.ViborTipaDvigatelya();
+            ConveerKuzovov conveerKuzovov = new ConveerKuzovov();
+            conveerKuzovov.ViborTipaKuzova();
         }
     }
 }
