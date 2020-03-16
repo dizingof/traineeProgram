@@ -18,7 +18,7 @@ namespace Oop_Avto_Abstract_Polimorfizm
             ConveerKuzovov conveerKuzovov = new ConveerKuzovov();
             conveerKuzovov.ViborTipaKuzova();
             ConveerAvto conveerAvto = new ConveerAvto();
-            conveerAvto.CreateCityCar();
+            
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Car
 {
     public class CityCar:BaseCar
     {
+
         public CityKoleso Koleso { get; set; }
         public StandartMotor Motor { get; set; }
         public Sedan Kuzov { get; set; }

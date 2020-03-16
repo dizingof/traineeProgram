@@ -12,7 +12,24 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
 {
     class ConveerAvto
     {
-        
+        public void ViborTipaAvto(CityKoleso koleso, StandartMotor motor, Sedan sedan, SportKoleso sportKoleso, SportMotor sportMotor, Hetchback kuzovHetchback, VnedorognikKoleso kolesoVnedorognik, VnedorognikMotor motorVnedorognik, VnedorognikKuzov kuzovVnedorognik)
+        {
+            Console.WriteLine("Vvedite Tip Avto: 1 - CityCar, 2 - SportCar, 3 - VnedorognikCar");
+
+            int selection = int.Parse(Console.ReadLine());
+            switch (selection)
+            {
+                case 1:
+                    CreateCityCar(koleso, motor, sedan);
+                    break;
+                case 2:
+                    CreateSportCar(sportKoleso, sportMotor, kuzovHetchback);
+                    break;
+                case 3:
+                    CreateVnedorognikCar(kolesoVnedorognik, motorVnedorognik, kuzovVnedorognik);
+                    break;
+            }
+        }
 
         public CityCar CreateCityCar(CityKoleso koleso, StandartMotor motor, Sedan sedan)
         {
