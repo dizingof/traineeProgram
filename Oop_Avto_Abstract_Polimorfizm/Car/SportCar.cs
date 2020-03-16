@@ -15,6 +15,13 @@ namespace Oop_Avto_Abstract_Polimorfizm.Car
         public SportMotor Motor { get; set; }
         public Hetchback Kuzov { get; set; }
 
+        public SportCar(SportKoleso koleso, SportMotor motor, Hetchback kuzovHetchback)
+        {
+            Koleso = koleso;
+            Motor = motor;
+            Kuzov = kuzovHetchback;
+
+        }
         public override void Drive()
         {
             Console.WriteLine("Drive SportCar");

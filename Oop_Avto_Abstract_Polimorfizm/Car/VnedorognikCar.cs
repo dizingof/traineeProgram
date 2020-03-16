@@ -15,6 +15,14 @@ namespace Oop_Avto_Abstract_Polimorfizm.Car
         public VnedorognikMotor Motor { get; set; }
         public VnedorognikKuzov Kuzov { get; set; }
 
+        public VnedorognikCar(VnedorognikKoleso koleso, VnedorognikMotor motor, VnedorognikKuzov kuzovVnedorognik)
+        {
+            Koleso = koleso;
+            Motor = motor;
+            Kuzov = kuzovVnedorognik;
+
+        }
+
         public override void Drive()
         {
             Console.WriteLine("Drive VnedorognikCar");

@@ -17,6 +17,8 @@ namespace Oop_Avto_Abstract_Polimorfizm
             conveerDvigatelei.ViborTipaDvigatelya();
             ConveerKuzovov conveerKuzovov = new ConveerKuzovov();
             conveerKuzovov.ViborTipaKuzova();
+            ConveerAvto conveerAvto = new ConveerAvto();
+            conveerAvto.CreateCityCar();
         }
     }
 }

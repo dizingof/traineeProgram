@@ -48,7 +48,7 @@
     <Compile Include="Car\EnumTipAvto.cs" />
     <Compile Include="Car\SportCar.cs" />
     <Compile Include="Car\VnedorognikCar.cs" />
-    <Compile Include="Conveers\Conveer.cs" />
+    <Compile Include="Conveers\ConveerAvto.cs" />
     <Compile Include="Conveers\ConveerDvigatelei.cs" />
     <Compile Include="Conveers\ConveerKoles.cs" />
     <Compile Include="Conveers\ConveerKuzovov.cs" />
