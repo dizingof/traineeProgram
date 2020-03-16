@@ -6,24 +6,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
     class ConveerKoles
     {
 
-        public void ViborTipaKolesa()
-        {
-            Console.WriteLine("Vvedite Tip Kolesa: 1 - CityKoleso, 2 - SportKoleso, 3 - VnedorognikKoleso");
-
-            int selection = int.Parse(Console.ReadLine());
-            switch (selection)
-            {
-                case 1:
-                    CreateCityKoleso();
-                    break;
-                case 2:
-                    CreateSportKoleso();
-                    break;
-                case 3:
-                    CreateVnedorognikKoleso();
-                    break;
-            }
-        }
+        
 
         public CityKoleso CreateCityKoleso()
         {

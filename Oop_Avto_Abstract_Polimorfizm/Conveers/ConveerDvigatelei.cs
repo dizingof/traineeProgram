@@ -9,24 +9,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
 {
     class ConveerDvigatelei
     {
-        public void ViborTipaDvigatelya()
-        {
-            Console.WriteLine("Vvedite Tip Dvigatelya: 1 - SportDvigatel, 2 - StandartDvigatel, 3 - VnedorognikDvigatel");
-
-            int selection = int.Parse(Console.ReadLine());
-            switch (selection)
-            {
-                case 1:
-                    CreateSportMotor();
-                    break;
-                case 2:
-                    CreateStandartMotor();
-                    break;
-                case 3:
-                    CreateVnedorognikMotor();
-                    break;
-            }
-        }
+        
 
         public SportMotor CreateSportMotor()
         {

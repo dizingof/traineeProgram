@@ -9,24 +9,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
 {
     class ConveerKuzovov
     {
-        public void ViborTipaKuzova()
-        {
-            Console.WriteLine("Vvedite Tip Kuzova: 1 - Hetchback, 2 - Sedan, 3 - VnedorognikKuzov");
-
-            int selection = int.Parse(Console.ReadLine());
-            switch (selection)
-            {
-                case 1:
-                    CreateHetchback();
-                    break;
-                case 2:
-                    CreateSedan();
-                    break;
-                case 3:
-                    CreateVnedorognikKuzov();
-                    break;
-            }
-        }
+        
 
         public Hetchback CreateHetchback()
         {
