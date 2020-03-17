@@ -31,8 +31,39 @@ namespace Oop_Avto_Abstract_Polimorfizm.Conveers
         }
         public void VivodCityCar(CityCar сityCar)
         {
-            Console.WriteLine(сityCar.Koleso);
+            сityCar.Koleso.GetNameKoleso();
+            сityCar.Motor.GetTipTopliva();
+            Console.WriteLine(сityCar.Kuzov);
+            сityCar.Drive();
+            сityCar.Koleso.Spinning();
+            сityCar.Kuzov.CloseDoor();
+            сityCar.Motor.VrashenieDvigatelya();
+
+
         }
+        public void VivodSportCar(SportCar sportCar)
+        {
+            sportCar.Koleso.GetNameKoleso();
+            sportCar.Motor.GetTipTopliva();
+            Console.WriteLine(sportCar.Kuzov);
+            sportCar.Drive();
+            sportCar.Koleso.Spinning();
+            sportCar.Kuzov.CloseDoor();
+            sportCar.Motor.VrashenieDvigatelya();
+
+        }
+        public void VivodVnedorognikCar(VnedorognikCar vnedorognikCar)
+        {
+            vnedorognikCar.Koleso.GetNameKoleso();
+            vnedorognikCar.Motor.GetTipTopliva();
+            Console.WriteLine(vnedorognikCar.Kuzov);
+            vnedorognikCar.Drive();
+            vnedorognikCar.Koleso.Spinning();
+            vnedorognikCar.Kuzov.CloseDoor();
+            vnedorognikCar.Motor.VrashenieDvigatelya();
+
+        }
+
 
     }
 }

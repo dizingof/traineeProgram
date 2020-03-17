@@ -19,5 +19,10 @@ namespace Oop_Avto_Abstract_Polimorfizm.Motor
         }
         public abstract void VrashenieDvigatelya();
 
+        public void GetTipTopliva()
+        {
+            Console.WriteLine(TipTopliva);
+        }
+
     }
 }

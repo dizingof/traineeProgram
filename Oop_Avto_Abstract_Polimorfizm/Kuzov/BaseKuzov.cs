@@ -16,6 +16,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Kuzov
             Ves = ves;
             Cvet = cvet;
         }
+
         public abstract void CloseDoor();
     }
 }

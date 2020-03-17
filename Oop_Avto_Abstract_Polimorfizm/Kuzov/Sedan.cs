@@ -17,7 +17,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Kuzov
 
         public override void CloseDoor()
         {
-            Console.WriteLine("Open door Sedan");
+            Console.WriteLine("Close door Sedan");
         }
     }
 }

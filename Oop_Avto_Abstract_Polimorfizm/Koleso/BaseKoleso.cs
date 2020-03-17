@@ -17,7 +17,10 @@ namespace Oop_Avto_Abstract_Polimorfizm
         }
 
 
-
+        public void GetNameKoleso()
+        {
+            Console.WriteLine(Nazvanie);
+        }
         public abstract void Spinning();
     }
 }

@@ -14,17 +14,39 @@ namespace Oop_Avto_Abstract_Polimorfizm
     {
         static void Main(string[] args)
         {
+            
 
-
+            Console.WriteLine("Viberite tip avto 1 - City Car, 2 - Sport Car, 3 - Vnedorognik");
             ConveerKoles conveerKoles = new ConveerKoles();        
             ConveerDvigatelei conveerDvigatelei = new ConveerDvigatelei();
             ConveerKuzovov conveerKuzovov = new ConveerKuzovov();
             ConveerAvto conveerAvto = new ConveerAvto();
-            var cityCarObj = conveerAvto.CreateCityCar(conveerKoles.CreateCityKoleso(), conveerDvigatelei.CreateStandartMotor(), conveerKuzovov.CreateSedan());
-            var sportCarObj = conveerAvto.CreateSportCar(conveerKoles.CreateSportKoleso(), conveerDvigatelei.CreateSportMotor(), conveerKuzovov.CreateHetchback());
-            var vnedorognikCarObj = conveerAvto.CreateVnedorognikCar(conveerKoles.CreateVnedorognikKoleso(), conveerDvigatelei.CreateVnedorognikMotor(), conveerKuzovov.CreateVnedorognikKuzov());
-
+            int selection = int.Parse(Console.ReadLine()); 
+            switch (selection)
+            {
+                case 1:
+                    var cityCarObj = conveerAvto.CreateCityCar(conveerKoles.CreateCityKoleso(), conveerDvigatelei.CreateStandartMotor(), conveerKuzovov.CreateSedan());
+                    conveerAvto.VivodCityCar(cityCarObj);
+                    Console.ReadLine();
+                    break;
+                case 2:
+                    var sportCarObj = conveerAvto.CreateSportCar(conveerKoles.CreateSportKoleso(), conveerDvigatelei.CreateSportMotor(), conveerKuzovov.CreateHetchback());
+                    conveerAvto.VivodSportCar(sportCarObj);
+                    Console.ReadLine();
+                    break;
+                case 3:
+                    var vnedorognikCarObj = conveerAvto.CreateVnedorognikCar(conveerKoles.CreateVnedorognikKoleso(), conveerDvigatelei.CreateVnedorognikMotor(), conveerKuzovov.CreateVnedorognikKuzov());
+                    conveerAvto.VivodVnedorognikCar(vnedorognikCarObj);
+                    Console.ReadLine();
+                    break;
+            }
+            
            
+            
+
+
+
+
 
 
         }
