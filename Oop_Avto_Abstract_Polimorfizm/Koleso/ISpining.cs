@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oop_Avto_Abstract_Polimorfizm.Car
+namespace Oop_Avto_Abstract_Polimorfizm.Koleso
 {
-    enum TipCar
+    public interface ISpining
     {
-        CityCar = 1,
-        SportCar = 2,
-        VnedorognikCar = 3
+        void SuperSpining();
+        void GetNameKoleso();
     }
 }

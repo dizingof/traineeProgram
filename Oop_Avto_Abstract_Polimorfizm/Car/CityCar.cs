@@ -16,6 +16,7 @@ namespace Oop_Avto_Abstract_Polimorfizm.Car
         public StandartMotor Motor { get; set; }
         public Sedan Kuzov { get; set; }
 
+        public TipCar tipCar { get { return TipCar.CityCar; } }
         public CityCar(CityKoleso koleso, StandartMotor motor, Sedan kuzovSedan)
         {
             Koleso = koleso;

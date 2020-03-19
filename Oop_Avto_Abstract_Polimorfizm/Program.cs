@@ -1,4 +1,5 @@
-﻿using Oop_Avto_Abstract_Polimorfizm.Conveers;
+﻿using Oop_Avto_Abstract_Polimorfizm.Car;
+using Oop_Avto_Abstract_Polimorfizm.Conveers;
 using Oop_Avto_Abstract_Polimorfizm.Koleso;
 using Oop_Avto_Abstract_Polimorfizm.Kuzov;
 using Oop_Avto_Abstract_Polimorfizm.Motor;
@@ -14,14 +15,14 @@ namespace Oop_Avto_Abstract_Polimorfizm
     {
         static void Main(string[] args)
         {
-            
+
 
             Console.WriteLine("Viberite tip avto 1 - City Car, 2 - Sport Car, 3 - Vnedorognik");
-            ConveerKoles conveerKoles = new ConveerKoles();        
+            ConveerKoles conveerKoles = new ConveerKoles();
             ConveerDvigatelei conveerDvigatelei = new ConveerDvigatelei();
             ConveerKuzovov conveerKuzovov = new ConveerKuzovov();
             ConveerAvto conveerAvto = new ConveerAvto();
-            int selection = int.Parse(Console.ReadLine()); 
+            int selection = int.Parse(Console.ReadLine());
             switch (selection)
             {
                 case 1:
@@ -40,10 +41,12 @@ namespace Oop_Avto_Abstract_Polimorfizm
                     Console.ReadLine();
                     break;
             }
-            
-           
-            
 
+            var a = new BaseKoleso();
+            var c = (INameKoleso)a;
+            c.GetNameKoleso();
+
+            var t = new BaseKuzov2(1, "");
 
 
 
@@ -51,5 +54,13 @@ namespace Oop_Avto_Abstract_Polimorfizm
 
         }
        
+    }
+     public class BaseKuzov2
+    {
+
+
+        
+
+        
     }
 }

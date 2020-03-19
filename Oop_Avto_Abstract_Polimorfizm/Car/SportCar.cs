@@ -11,9 +11,9 @@ namespace Oop_Avto_Abstract_Polimorfizm.Car
 {
     class SportCar:BaseCar
     {
-        public SportKoleso Koleso { get; set; }
-        public SportMotor Motor { get; set; }
-        public Hetchback Kuzov { get; set; }
+        private SportKoleso Koleso;
+        private SportMotor Motor;
+        private Hetchback Kuzov;
 
         public SportCar(SportKoleso koleso, SportMotor motor, Hetchback kuzovHetchback)
         {

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BFB56ABC-671C-4930-BDF4-19ECF52450C8}</ProjectGuid>
+    <ProjectGuid>{9894E506-1391-4FBC-803C-FA30E16F5A80}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Oop_Avto_Abstract_Polimorfizm</RootNamespace>
-    <AssemblyName>Oop_Avto_Abstract_Polimorfizm</AssemblyName>
+    <RootNamespace>kolekcii</RootNamespace>
+    <AssemblyName>kolekcii</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,35 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car\BaseCar.cs" />
-    <Compile Include="Car\CityCar.cs" />
-    <Compile Include="Car\TipCar.cs" />
-    <Compile Include="Car\SportCar.cs" />
-    <Compile Include="Car\VnedorognikCar.cs" />
-    <Compile Include="Conveers\ConveerAvto.cs" />
-    <Compile Include="Conveers\ConveerDvigatelei.cs" />
-    <Compile Include="Conveers\ConveerKoles.cs" />
-    <Compile Include="Conveers\ConveerKuzovov.cs" />
-    <Compile Include="Koleso\BaseKoleso.cs" />
-    <Compile Include="Koleso\CityKoleso.cs" />
-    <Compile Include="Koleso\INameKoleso.cs" />
-    <Compile Include="Koleso\ISpining.cs" />
-    <Compile Include="Koleso\SportKoleso.cs" />
-    <Compile Include="Koleso\VnedorognikKoleso.cs" />
-    <Compile Include="Kuzov\BaseKuzov.cs" />
-    <Compile Include="Kuzov\Hetchback.cs" />
-    <Compile Include="Kuzov\Sedan.cs" />
-    <Compile Include="Kuzov\VnedorognikKuzov.cs" />
-    <Compile Include="Motor\BaseMotor.cs" />
-    <Compile Include="Motor\SportMotor.cs" />
-    <Compile Include="Motor\StandartMotor.cs" />
-    <Compile Include="Motor\VnedorognikMotor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
