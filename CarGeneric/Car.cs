@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace CarGeneric
 {
-    class Car<T> where T:  IZapusk 
+    class Car<T, U> where T:  IZapusk
     {
        private T Dvigatel { get; set; }
-        
-        public Car(T dvigatel)
+        private U Koleso { get; set; }
+
+        public Car(T dvigatel, U koleso)
         {
             Dvigatel = dvigatel;
+            Koleso = koleso;
         }
 
         public void ZavestiAvto()

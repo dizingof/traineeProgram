@@ -45,10 +45,13 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="ElektroMotor.cs" />
+    <Compile Include="ISpining.cs" />
     <Compile Include="IZapusk.cs" />
+    <Compile Include="Koleso.cs" />
     <Compile Include="Motor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SportKoleso.cs" />
     <Compile Include="SportMotor.cs" />
   </ItemGroup>
   <ItemGroup>
