@@ -8,10 +8,14 @@ namespace CarGeneric
 {
     abstract class Koleso
     {
-        private string Name { get; set; }
+        private string Name { get; }
         public Koleso(string name)
         {
             Name = name;
+        }
+        public void GetInfoKoleso()
+        {
+            Console.WriteLine(Name);
         }
     }
 }

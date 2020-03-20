@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarGeneric
 {
-    class Car<T, U> where T:  IZapusk
+    class Car<T, U> where T:  IZapusk where U: ISpining
     {
        private T Dvigatel { get; set; }
         private U Koleso { get; set; }
@@ -22,7 +22,10 @@ namespace CarGeneric
             Dvigatel.Start();
         }
 
-      
+        public void Poehat()
+        {
+            Koleso.Spining();
+        }
 
     }
 }

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllRoadKoleso.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="ElektroMotor.cs" />
     <Compile Include="ISpining.cs" />

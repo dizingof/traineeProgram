@@ -20,15 +20,23 @@ namespace CarGeneric
             string myElektroKontroller = Console.ReadLine();
             Console.WriteLine("Vvedite nazvanie Kolesa");
             string nameKoleso = Console.ReadLine();
+            Console.WriteLine("Vvedite nagruzku na koleso");
+            int nagruzkaNaKoleso = int.Parse(Console.ReadLine());
+            Console.WriteLine("Vvedite visotu protektora");
+            int visotaProtektora = int.Parse(Console.ReadLine());
 
-            Car<SportMotor, Koleso> sportCar = new Car<SportMotor, Koleso>(new SportMotor(myTurbina, myMarka, myMoshnost), new Koleso(nameKoleso));
+            Car<SportMotor, SportKoleso> sportCar = new Car<SportMotor, SportKoleso>(new SportMotor(myTurbina, myMarka, myMoshnost), new SportKoleso(nagruzkaNaKoleso, nameKoleso));
             sportCar.ZavestiAvto();
-            
+            sportCar.Poehat();
 
 
-            Car<ElektroMotor, Koleso> elektroCar = new Car<ElektroMotor, Koleso>(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost), new Koleso(nameKoleso));
+
+
+            Car<ElektroMotor, AllRoadKoleso> elektroCar = new Car<ElektroMotor, AllRoadKoleso>(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost), new AllRoadKoleso(visotaProtektora, nameKoleso));
             elektroCar.ZavestiAvto();
-            
+            elektroCar.Poehat();
+
+
 
             Console.ReadLine();
 
