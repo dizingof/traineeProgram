@@ -16,13 +16,13 @@ namespace CarGeneric
             Moshnost = moshnost;
 
         }
-
         public void GetInfo()
         {
             Console.WriteLine(Marka.ToString());
             Console.WriteLine(Moshnost.ToString());
         }
 
-        
+
+
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarGeneric
 {
-    class Car<T, U> where T:  IZapusk where U: ISpining
+    class Car<T, U> where T: Motor<string, int>, IZapusk where U: Koleso, ISpining
     {
-       private T Dvigatel { get; set; }
+        public T Dvigatel { get; set; }
         private U Koleso { get; set; }
 
         public Car(T dvigatel, U koleso)
@@ -17,9 +17,11 @@ namespace CarGeneric
             Koleso = koleso;
         }
 
-        public void ZavestiAvto()
+        public void ZavestiAvto(StartDelegate startDelegate)
         {
-            Dvigatel.Start();
+
+            Console.WriteLine("Vivod starta cherez delegat}");
+            startDelegate();
         }
 
         public void Poehat()
@@ -27,5 +29,9 @@ namespace CarGeneric
             Koleso.Spining();
         }
 
+        
+
     }
+
+    public delegate void StartDelegate();
 }

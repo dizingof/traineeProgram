@@ -25,15 +25,20 @@ namespace CarGeneric
             Console.WriteLine("Vvedite visotu protektora");
             int visotaProtektora = int.Parse(Console.ReadLine());
 
+        
             Car<SportMotor, SportKoleso> sportCar = new Car<SportMotor, SportKoleso>(new SportMotor(myTurbina, myMarka, myMoshnost), new SportKoleso(nagruzkaNaKoleso, nameKoleso));
-            sportCar.ZavestiAvto();
+
+            sportCar.ZavestiAvto(new SportMotor(myTurbina, myMarka, myMoshnost).Start);
             sportCar.Poehat();
+
+            //ZavestiAvto zavestiAvto = sportCar.ZavestiAvto;
+            //zavestiAvto();
 
 
 
 
             Car<ElektroMotor, AllRoadKoleso> elektroCar = new Car<ElektroMotor, AllRoadKoleso>(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost), new AllRoadKoleso(visotaProtektora, nameKoleso));
-            elektroCar.ZavestiAvto();
+            elektroCar.ZavestiAvto(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost).Start);
             elektroCar.Poehat();
 
 
