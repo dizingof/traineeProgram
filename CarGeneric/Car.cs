@@ -26,12 +26,17 @@ namespace CarGeneric
 
         public void Poehat()
         {
-            Koleso.Spining();
+            EventPoehat.Invoke();
         }
+        public event PoehatDelegat EventPoehat = null;
 
-        
+
 
     }
+    public delegate void PoehatDelegat();
+   
+
+
 
     public delegate void StartDelegate();
 }

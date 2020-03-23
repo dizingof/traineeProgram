@@ -29,16 +29,17 @@ namespace CarGeneric
             Car<SportMotor, SportKoleso> sportCar = new Car<SportMotor, SportKoleso>(new SportMotor(myTurbina, myMarka, myMoshnost), new SportKoleso(nagruzkaNaKoleso, nameKoleso));
 
             sportCar.ZavestiAvto(new SportMotor(myTurbina, myMarka, myMoshnost).Start);
+            sportCar.EventPoehat += new SportKoleso(nagruzkaNaKoleso, nameKoleso).Spining;
             sportCar.Poehat();
 
-            //ZavestiAvto zavestiAvto = sportCar.ZavestiAvto;
-            //zavestiAvto();
+           
 
 
 
 
             Car<ElektroMotor, AllRoadKoleso> elektroCar = new Car<ElektroMotor, AllRoadKoleso>(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost), new AllRoadKoleso(visotaProtektora, nameKoleso));
             elektroCar.ZavestiAvto(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost).Start);
+            elektroCar.EventPoehat += new AllRoadKoleso(visotaProtektora, nameKoleso).Spining;
             elektroCar.Poehat();
 
 
