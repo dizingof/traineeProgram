@@ -8,20 +8,20 @@ namespace Indexers
 {
     class MyClass
     {
-        private int[] myArray = new int[5];
+        
 
         public int this[int index]
         {
             get
             {
-                
-                return myArray[index];
+                if (index == 0)
+                    return 1;
+                else return 2;
                 
             }
             set
             {
-                if(value !=3)
-                myArray[index] = value;
+                
             }
         }
     }

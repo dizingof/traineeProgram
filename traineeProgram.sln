@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delega
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexers", "Indexers\Indexers.csproj", "{D59A0E0D-6228-41FD-AA07-C3A5B8647165}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipSvyazeiClassesObject", "TipSvyazeiClassesObject\TipSvyazeiClassesObject.csproj", "{BCDA2DE2-8B40-4948-B0D4-1A7D6A83DDBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{D59A0E0D-6228-41FD-AA07-C3A5B8647165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D59A0E0D-6228-41FD-AA07-C3A5B8647165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D59A0E0D-6228-41FD-AA07-C3A5B8647165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDA2DE2-8B40-4948-B0D4-1A7D6A83DDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDA2DE2-8B40-4948-B0D4-1A7D6A83DDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDA2DE2-8B40-4948-B0D4-1A7D6A83DDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDA2DE2-8B40-4948-B0D4-1A7D6A83DDBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

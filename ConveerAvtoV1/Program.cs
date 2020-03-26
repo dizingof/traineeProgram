@@ -10,9 +10,61 @@ namespace ConveerAvtoV1
     {
         static void Main(string[] args)
         {
-           
-            Conveer myConveer = new Conveer();
-            myConveer.SozdanieAvto();
+
+            //Conveer myConveer = new Conveer();
+            //myConveer.SozdanieAvto();
+            Kolesa myKolesa = new Kolesa();
+            Console.WriteLine("Vvedite diametr koles");
+            myKolesa.Diametr = int.Parse(Console.ReadLine());
+            Console.WriteLine("Vvedite vid koles");
+            myKolesa.VidKoles = Console.ReadLine();
+
+            Console.WriteLine("Vvedite Name koles");
+            myKolesa.Name = Console.ReadLine();
+
+            Kuzov myKuzuv = new Kuzov();
+            //Type b = myKuzuv.GetType();
+            Console.WriteLine("Vvedite cvet kuzova");
+            myKuzuv.cvetKuzova = Console.ReadLine();
+            Console.WriteLine("Vvedite tip kuzova");
+            myKuzuv.tipKuzova = Console.ReadLine();
+
+            Console.WriteLine("Vvedite Name kuzova");
+            myKuzuv.Name = Console.ReadLine();
+            Motor myMotor = new Motor();
+            Console.WriteLine("Vvedite moshnost motora");
+            myMotor.Capacity = int.Parse(Console.ReadLine());
+            Console.WriteLine("Vvedite tip motora: 1-diesel, 2-elektro, 3-benzin");          
+            // myMotor.VidMotora = myMotor.GetTipMotora(int.Parse(Console.ReadLine()));
+            int a = int.Parse(Console.ReadLine());
+            myMotor.VidMotora = (TipMotora)a;
+
+            Console.WriteLine("Vvedite Name motor");
+            myMotor.Name = Console.ReadLine();
+            Car avto = new Car(myKuzuv, myKolesa, myMotor);
+
+
+            Console.WriteLine($"Vi vibrali avto s takimi parametrami:");
+            Console.WriteLine($"diametr koles: {avto.UznatDiametrKoles()}");
+            Console.WriteLine($"vid koles: {avto.Kolesa.VidKoles}");
+            Console.WriteLine($"Tip Motora: {avto.Motor.VidMotora}");
+            Console.WriteLine($"Capacity Motora: {avto.Motor.Capacity}");
+            Console.WriteLine($"Tip Kuzova: {avto.Kuzov.tipKuzova}");
+            Console.WriteLine($"Cvet Kuzova: {avto.Kuzov.cvetKuzova}");
+            Console.WriteLine($"Name Motora: {avto.Motor.Name}");
+            Console.WriteLine($"Name Kuzova: {avto.Kuzov.Name}");
+            Console.WriteLine($"Name Kuzova: {avto.Kuzov.Name}");
+
+          
+
+            avto["Motor"] = "Name motora cherez indexator";
+            avto["Koleso"] = "Name Koleso cherez indexator";
+            avto["Kuzov"] = "Name Kuzov cherez indexator";
+
+            Console.WriteLine(avto["Motor"]);
+            Console.WriteLine(avto["Koleso"]);
+            Console.WriteLine(avto["Kuzov"]);
+
             Console.ReadKey();
 
         }

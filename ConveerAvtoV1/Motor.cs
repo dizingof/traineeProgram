@@ -10,6 +10,7 @@ namespace ConveerAvtoV1
     {
         public int Capacity { get; set; }
         public TipMotora VidMotora { get; set; }
+        public string Name { get; set; }
 
         //TipMotora x;
         //public TipMotora GetTipMotora(int value)

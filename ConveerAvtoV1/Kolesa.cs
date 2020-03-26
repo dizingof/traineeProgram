@@ -10,5 +10,6 @@ namespace ConveerAvtoV1
     {
         public int Diametr { get; set; }
         public string VidKoles { get; set; }
+        public string Name { get; set; }
     }
 }

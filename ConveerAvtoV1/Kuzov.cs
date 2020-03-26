@@ -10,5 +10,6 @@ namespace ConveerAvtoV1
     {
         public string tipKuzova { get; set; }
         public string cvetKuzova { get; set; }
+        public string Name { get; set; }
     }
 }
