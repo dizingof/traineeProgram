@@ -22,6 +22,11 @@ namespace CarGeneric
         {
             Console.WriteLine(Turbina.ToString());
         }
+        public void Uskoryatsa(string message)
+        {
+            Console.WriteLine($"Uskorenie{message}") ;
+        }
+
     }
 
     

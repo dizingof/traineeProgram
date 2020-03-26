@@ -26,21 +26,24 @@ namespace CarGeneric
             int visotaProtektora = int.Parse(Console.ReadLine());
 
         
-            Car<SportMotor, SportKoleso> sportCar = new Car<SportMotor, SportKoleso>(new SportMotor(myTurbina, myMarka, myMoshnost), new SportKoleso(nagruzkaNaKoleso, nameKoleso));
+            Car<SportMotor, SportKoleso, string> sportCar = new Car<SportMotor, SportKoleso, string>(new SportMotor(myTurbina, myMarka, myMoshnost), new SportKoleso(nagruzkaNaKoleso, nameKoleso));
 
             sportCar.ZavestiAvto(new SportMotor(myTurbina, myMarka, myMoshnost).Start);
             sportCar.EventPoehat += new SportKoleso(nagruzkaNaKoleso, nameKoleso).Spining;
+            sportCar.EventUskoryatsa += new SportMotor(myTurbina, myMarka, myMoshnost).Uskoryatsa;
             sportCar.Poehat();
-
-           
-
+            sportCar.ZapuskUskorenia();
 
 
 
-            Car<ElektroMotor, AllRoadKoleso> elektroCar = new Car<ElektroMotor, AllRoadKoleso>(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost), new AllRoadKoleso(visotaProtektora, nameKoleso));
-            elektroCar.ZavestiAvto(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost).Start);
-            elektroCar.EventPoehat += new AllRoadKoleso(visotaProtektora, nameKoleso).Spining;
-            elektroCar.Poehat();
+
+
+
+
+            //Car<ElektroMotor, AllRoadKoleso> elektroCar = new Car<ElektroMotor, AllRoadKoleso>(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost), new AllRoadKoleso(visotaProtektora, nameKoleso));
+            //elektroCar.ZavestiAvto(new ElektroMotor(myElektroKontroller, myMarka, myMoshnost).Start);
+            //elektroCar.EventPoehat += new AllRoadKoleso(visotaProtektora, nameKoleso).Spining;
+            //elektroCar.Poehat();
 
 
 

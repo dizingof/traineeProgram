@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarGeneric
 {
-    class Car<T, U> where T: Motor<string, int>, IZapusk where U: Koleso, ISpining
+    class Car<T, U, N> where T: Motor<string, int>, IZapusk where U: Koleso, ISpining
     {
         public T Dvigatel { get; set; }
         private U Koleso { get; set; }
@@ -30,6 +30,14 @@ namespace CarGeneric
         }
         public event PoehatDelegat EventPoehat = null;
 
+        /////////////////////////////////////////////////
+        public void ZapuskUskorenia()
+        {
+            EventUskoryatsa("parametr iz sobitiya");
+        }
+       
+        public event Action<string> EventUskoryatsa = null;
+        /////////////////////////////////////////////////
 
 
     }
