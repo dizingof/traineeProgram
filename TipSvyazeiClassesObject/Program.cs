@@ -22,7 +22,7 @@ namespace TipSvyazeiClassesObject
     
     class Room
     {
-        public TV televizor { get; set; } 
+        public TV Televizor { get; set; } 
     }
 
 
