@@ -44,7 +44,7 @@ namespace TipSvyazeiClassesObject
     ///////////////////Agregaciya///////////////////
     class People
     {
-        public int name { get; set; }
+        public int Name { get; set; }
     }
     
     
