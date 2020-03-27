@@ -10,6 +10,9 @@ namespace TipSvyazeiClassesObject
     {
         static void Main(string[] args)
         {
+            var a = new Chelovek();
+            var b = new Mozg();
+            a.Mozg = b;
         }
 
     }
@@ -42,16 +45,16 @@ namespace TipSvyazeiClassesObject
         }
     }
     ///////////////////Agregaciya///////////////////
-    class People
+    interface IPeople
     {
-        public int Name { get; set; }
+        void Move();
     }
     
     
     class Dom
     {
-        public People People { get; set; }
-        public Dom(People peopleObj)
+        public IPeople People { get; set; }
+        public Dom(IPeople peopleObj)
         {
             People = peopleObj;
         }

@@ -12,10 +12,14 @@ namespace Action_delegat_
         {
             var motor = new Motor();
             var avto = new Car();
+            var kuzov = new Kuzov();
 
 
             avto.EventUskoryatsa += motor.KolenvalKrutitsya;
 
+
+            avto.EventOpenDoor += kuzov.OpenDoor;
+           
 
             avto.Zavoditsya();
             Console.ReadKey();

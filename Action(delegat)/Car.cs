@@ -14,7 +14,25 @@ namespace Action_delegat_
             EventUskoryatsa("1");
         }
 
-        
+        public event Action EventUskoryatsa1;
+
+
+
         public event Action<string> EventUskoryatsa;
+
+
+        public void VzyatPassagira()
+        {
+            EventOpenDoor(2);
+        }
+
+        public event Func<int, string> EventOpenDoor;
+
+
+
+
+
+
+        public event Action<string, string> EventUskoryatsa2;
     }
 }
