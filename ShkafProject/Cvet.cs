@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-    class Cvet
+    class Cvet:IGetInfo<string>
     {
         private string CvetShkafa;
         public Cvet(string cvetShkafa)
@@ -14,7 +14,7 @@ namespace ShkafProject
             CvetShkafa = cvetShkafa;
         }
 
-        public string GetCvet()
+        public string GetInfo()
         {
             return CvetShkafa;
         }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-    class Shirina
+    class Shirina:IGetInfo<int>
     {
         private int RazmerShirini { get; }
         public Shirina(int razmerShirini)
         {
             RazmerShirini = razmerShirini;
         }
-        public int GetShirina()
+        public int GetInfo()
         {
             return RazmerShirini;
         }

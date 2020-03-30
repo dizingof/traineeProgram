@@ -12,7 +12,7 @@ namespace ShkafProject
         {
             Console.WriteLine("Vvedite razmer visoti shkafa");
             int razmerVisoti = int.Parse(Console.ReadLine());
-            Visota VisotaShkafa = new Visota(razmerVisoti);
+            Visota visotaShkafa = new Visota(razmerVisoti);
 
             Console.WriteLine("Vvedite razmer shirini shkafa");
             int razmerShirini = int.Parse(Console.ReadLine());
@@ -34,8 +34,14 @@ namespace ShkafProject
             string cvetShkafa = Console.ReadLine();
             Cvet cvet = new Cvet(cvetShkafa);
 
-            Shkaf shkaf = new Shkaf(VisotaShkafa, shirinaShkafa, dlinaShkafa, glubinaShkafa, polkaShkafa, cvet);
-            shkaf.GetVisotaShkafa();
+            Shkaf shkaf = new Shkaf(visotaShkafa, shirinaShkafa, dlinaShkafa, glubinaShkafa, polkaShkafa, cvet);
+            shkaf.GetInfoShkaf(visotaShkafa);
+            shkaf.GetInfoShkaf(shirinaShkafa);
+            shkaf.GetInfoShkaf(dlinaShkafa);
+            shkaf.GetInfoShkaf(glubinaShkafa);
+            shkaf.GetInfoShkaf(polkaShkafa);
+            shkaf.GetInfoShkaf(cvet);
+
 
             Console.ReadLine();
 

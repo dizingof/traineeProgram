@@ -25,29 +25,11 @@ namespace ShkafProject
             CvetShkafa = cvetShkafa;
 
         }
-        public void GetVisotaShkafa()
+        public void GetInfoShkaf<T>(IGetInfo<T> obj)
         {
-            Console.WriteLine(VisotaShkafa.GetVisota()); 
+            Console.WriteLine(obj.GetInfo());
         }
-        public void GetShirinaShkafa()
-        {
-            Console.WriteLine(ShirinaShkafa.GetShirina());
-        }
-        public void GetDlinaShkafa()
-        {
-            Console.WriteLine(DlinaShkafa.GetDlina());
-        }
-        public void GetGlubinaShkafa()
-        {
-            Console.WriteLine(GlubinaShkafa.GetGlubina());
-        }
-        public void GetKolichestvoPolok()
-        {
-            Console.WriteLine(PolkaSgkafa.GetKolichestvoPolok());
-        }
-        public void GetCvetShkafa()
-        {
-            Console.WriteLine(PolkaSgkafa.GetKolichestvoPolok());
-        }
+
+        
     }
 }

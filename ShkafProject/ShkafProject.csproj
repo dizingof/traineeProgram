@@ -46,6 +46,7 @@
     <Compile Include="Cvet.cs" />
     <Compile Include="Dlina.cs" />
     <Compile Include="Glubina.cs" />
+    <Compile Include="IGetInfo.cs" />
     <Compile Include="Polka.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

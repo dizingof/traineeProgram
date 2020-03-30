@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-    class Polka
+    class Polka:IGetInfo<int>
     {
         private int KolichestvoPolok;
         public Polka(int kolichestvoPolok)
         {
             KolichestvoPolok = kolichestvoPolok;
         }
-        public int GetKolichestvoPolok()
+        public int GetInfo()
         {
             return KolichestvoPolok;
         }

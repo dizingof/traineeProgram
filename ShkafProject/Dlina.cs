@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-    class Dlina
+    class Dlina:IGetInfo<int>
     {
         private int RazmerDlini;
         public Dlina(int razmerDlini)
         {
             RazmerDlini = razmerDlini;
         }
-        public int GetDlina()
+        public int GetInfo()
         {
             return RazmerDlini;
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-     class Visota
+     class Visota:IGetInfo<int>
     {
         private int RazmerVisoti;
         public Visota(int razmerVisoti)
@@ -14,7 +14,7 @@ namespace ShkafProject
             RazmerVisoti = razmerVisoti;
         }
 
-        public int GetVisota()
+        public int GetInfo()
         {
             return RazmerVisoti;
         }
