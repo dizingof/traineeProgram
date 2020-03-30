@@ -16,12 +16,23 @@ namespace Action_delegat_
 
 
             avto.EventUskoryatsa += motor.KolenvalKrutitsya;
-
-
-            avto.EventOpenDoor += kuzov.OpenDoor;
-           
-
             avto.Zavoditsya();
+
+
+
+            avto.EventOpenDoor += x => {  Console.WriteLine($"Vi otkrili {x} dverei"); } ;
+            avto.VzyatPassagira();
+
+
+
+
+            Func<int, int, int> DelegatForLambda = (x, y) =>  x + y;
+
+            int sum = DelegatForLambda(3, 4);
+            Console.WriteLine(sum);
+
+
+
             Console.ReadKey();
         }
     }

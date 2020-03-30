@@ -26,13 +26,13 @@ namespace Action_delegat_
             EventOpenDoor(2);
         }
 
-        public event Func<int, string> EventOpenDoor;
+        public event Action<int> EventOpenDoor;
 
 
 
 
 
 
-        public event Action<string, string> EventUskoryatsa2;
+        
     }
 }

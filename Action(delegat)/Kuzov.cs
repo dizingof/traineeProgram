@@ -8,9 +8,9 @@ namespace Action_delegat_
 {
     class Kuzov
     {
-        public string OpenDoor(int count)
-        {
-            return $"Vi otkrili {count} dverei";
-        }
+        //public string OpenDoor(int count)
+        //{
+        //    return $"Vi otkrili {count} dverei";
+        //}
     }
 }
