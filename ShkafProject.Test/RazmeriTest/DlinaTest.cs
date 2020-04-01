@@ -7,7 +7,7 @@ namespace ShkafProject.Test
     public class DlinaTest
     {
         [TestMethod]
-        public void Visota_GetVisota_10_void_10returned()
+        public void Dlina_GetDlina_10_void_10returned()
         {
             //arrange
             int expected = 10;
