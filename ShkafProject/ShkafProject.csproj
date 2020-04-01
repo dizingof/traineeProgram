@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conveer.cs" />
     <Compile Include="Cvet.cs" />
     <Compile Include="Razmeri\Dlina.cs" />
     <Compile Include="Razmeri\Glubina.cs" />

@@ -14,8 +14,8 @@ namespace ShkafProject.Test
 
             //act
             int razmerVisoti = 10;
-            Visota visotaShkafa = new Visota(razmerVisoti);
-            int actual = visotaShkafa.GetVisota();
+            Dlina visotaShkafa = new Dlina(razmerVisoti);
+            int actual = visotaShkafa.GetDlina();
             //assert
             Assert.AreEqual(expected, actual);
         }

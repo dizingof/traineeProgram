@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-    class Dlina
+    public class Dlina
     {
         private int RazmerDlini;
         public Dlina(int razmerDlini)
