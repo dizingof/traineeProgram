@@ -21,10 +21,10 @@ namespace ShkafProject
         }
         public void OtobrazitParametriPolki()
         {
-            ParametriPolki.OtobrazitDlinu();
+           
             ParametriPolki.OtobrazitVisotu();
             ParametriPolki.OtobrazitShirinu();
-            
+            ParametriPolki.OtobrazitDlinu();
         }
     
         public void OtobrazitCvetPolki()

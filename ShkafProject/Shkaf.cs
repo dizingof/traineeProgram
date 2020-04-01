@@ -22,9 +22,10 @@ namespace ShkafProject
 
         public void OtobrazitParametriShkafa()
         {
-            ParametriShkafa.OtobrazitDlinu();
+            
             ParametriShkafa.OtobrazitVisotu();
             ParametriShkafa.OtobrazitShirinu();
+            ParametriShkafa.OtobrazitDlinu();
             ParametriShkafa.OtobrazitGlubinu();
         }
 
