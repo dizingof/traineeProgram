@@ -1,21 +1,21 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ShkafProject.Test
+namespace ShkafProject.Test.RazmeriTest
 {
     [TestClass]
-    public class DlinaTest
+    public class ShirinaTest
     {
         [TestMethod]
-        public void Dlina_GetDlina_10_void_10returned()
+        public void Shirina_GetShirina_10_void_10returned()
         {
             //arrange
             int expected = 10;
 
             //act
-            int razmerDlini = 10;
-            Dlina dlinaShkafa = new Dlina(razmerDlini);
-            int actual = dlinaShkafa.GetDlina();
+            int razmerShirini = 10;
+            Shirina shirinaShkafa = new Shirina(razmerShirini);
+            int actual = shirinaShkafa.GetShirina();
             //assert
             Assert.AreEqual(expected, actual);
         }
