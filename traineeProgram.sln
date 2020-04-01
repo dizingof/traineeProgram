@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception", "Exception\Exce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShkafProject", "ShkafProject\ShkafProject.csproj", "{AF1B3A8C-4787-45ED-B47B-DCFBA9547D38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShkafProject.Test", "ShkafProject.Test\ShkafProject.Test.csproj", "{04BB9FAA-C4AF-4308-91D1-EA2C805D0357}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{AF1B3A8C-4787-45ED-B47B-DCFBA9547D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF1B3A8C-4787-45ED-B47B-DCFBA9547D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF1B3A8C-4787-45ED-B47B-DCFBA9547D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BB9FAA-C4AF-4308-91D1-EA2C805D0357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BB9FAA-C4AF-4308-91D1-EA2C805D0357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BB9FAA-C4AF-4308-91D1-EA2C805D0357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BB9FAA-C4AF-4308-91D1-EA2C805D0357}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

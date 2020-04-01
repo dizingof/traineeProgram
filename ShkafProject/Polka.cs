@@ -8,14 +8,28 @@ namespace ShkafProject
 {
     class Polka
     {
-        private int KolichestvoPolok;
-        public Polka(int kolichestvoPolok)
+
+        private Parametri ParametriPolki;
+        private Cvet CvetPolki;
+
+
+        public Polka(Parametri parametriPolki, Cvet cvetPolki)
         {
-            KolichestvoPolok = kolichestvoPolok;
+            ParametriPolki = parametriPolki;
+            CvetPolki = cvetPolki;
+
         }
-        public int GetKolichestvoPolok()
+        public void OtobrazitParametriPolki()
         {
-            return KolichestvoPolok;
+            ParametriPolki.OtobrazitDlinu();
+            ParametriPolki.OtobrazitVisotu();
+            ParametriPolki.OtobrazitShirinu();
+            
+        }
+    
+        public void OtobrazitCvetPolki()
+        {
+            Console.WriteLine(CvetPolki.GetCvet());
         }
     }
 }

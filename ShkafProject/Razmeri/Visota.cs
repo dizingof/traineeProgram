@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-     class Visota
+    public class Visota
     {
         private int RazmerVisoti;
         public Visota(int razmerVisoti)

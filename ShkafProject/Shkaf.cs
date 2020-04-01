@@ -8,46 +8,39 @@ namespace ShkafProject
 {
     class Shkaf
     {
-        private Visota VisotaShkafa;
-        private Shirina ShirinaShkafa;
-        private Dlina DlinaShkafa;
-        private Glubina GlubinaShkafa;
-        private Polka PolkaSgkafa;
+        private Parametri ParametriShkafa;
         private Cvet CvetShkafa;
+        private Polka PolkaSgkafa;
 
-        public Shkaf(Visota visotaShkafa, Shirina shirinaShkafa, Dlina dlinaShkafa, Glubina glubinaShkafa, Polka polkaSgkafa, Cvet cvetShkafa)
+        public Shkaf(Parametri parametriShkafa, Cvet cvetShkafa, Polka polkaSgkafa)
         {
-            VisotaShkafa = visotaShkafa;
-            ShirinaShkafa = shirinaShkafa;
-            DlinaShkafa = dlinaShkafa;
-            GlubinaShkafa = glubinaShkafa;
-            PolkaSgkafa = polkaSgkafa;
+            ParametriShkafa = parametriShkafa;
             CvetShkafa = cvetShkafa;
+            PolkaSgkafa = polkaSgkafa;
 
         }
-        public void GetVisotaShkafa()
+
+        public void OtobrazitParametriShkafa()
         {
-            Console.WriteLine(VisotaShkafa.GetVisota()); 
+            ParametriShkafa.OtobrazitDlinu();
+            ParametriShkafa.OtobrazitVisotu();
+            ParametriShkafa.OtobrazitShirinu();
+            ParametriShkafa.OtobrazitGlubinu();
         }
-        public void GetShirinaShkafa()
+
+        public void OtobrazitCvetShkafa()
         {
-            Console.WriteLine(ShirinaShkafa.GetShirina());
+            Console.WriteLine(CvetShkafa.GetCvet());
         }
-        public void GetDlinaShkafa()
+
+        public void OtobrazitParametriPolki()
         {
-            Console.WriteLine(DlinaShkafa.GetDlina());
+            PolkaSgkafa.OtobrazitParametriPolki();
+            
         }
-        public void GetGlubinaShkafa()
-        {
-            Console.WriteLine(GlubinaShkafa.GetGlubina());
-        }
-        public void GetKolichestvoPolok()
-        {
-            Console.WriteLine(PolkaSgkafa.GetKolichestvoPolok());
-        }
-        public void GetCvetShkafa()
-        {
-            Console.WriteLine(PolkaSgkafa.GetKolichestvoPolok());
-        }
+
+
+
+
     }
 }
