@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-    class Shirina
+    class Shirina:IGetInfo
     {
         private int RazmerShirini { get; }
         public Shirina(int razmerShirini)
@@ -16,6 +16,10 @@ namespace ShkafProject
         public int GetShirina()
         {
             return RazmerShirini;
+        }
+        public void GetInfo()
+        {
+            Console.WriteLine(GetShirina());
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShkafProject
 {
-    class Glubina
+    class Glubina:IGetInfo
     {
         private int RazmerGlubini;
         public Glubina(int razmerGlubini)
@@ -16,6 +16,10 @@ namespace ShkafProject
         public int GetGlubina()
         {
             return RazmerGlubini;
+        }
+        public void GetInfo()
+        {
+            Console.WriteLine(GetGlubina());
         }
     }
 }

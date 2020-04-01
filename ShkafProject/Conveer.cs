@@ -32,15 +32,29 @@ namespace ShkafProject
 
             return naborRazmerov;
         }
-        public void SozdanieRazmerov(Dictionary<string, int> naborRazmerov)
+        public Dictionary<string, object> SozdanieRazmerov(Dictionary<string, int> naborRazmerov)
         {
             Visota visota = new Visota(naborRazmerov["Visota"]);
             Shirina shirina = new Shirina(naborRazmerov["Shirina"]);
-            Dlina dlinaShkafa = new Dlina(naborRazmerov["Dlina"]);
-            Glubina glubinaShkafa = new Glubina(naborRazmerov["Glubina"]);
+            Dlina dlina = new Dlina(naborRazmerov["Dlina"]);
+            Glubina glubina = new Glubina(naborRazmerov["Glubina"]);
 
+            Dictionary<string, object> razmeri = new Dictionary<string, object>();
+            razmeri.Add("Visota", visota);
+            razmeri.Add("Shirina", shirina);
+            razmeri.Add("Dlina", dlina);
+            razmeri.Add("Glubina", glubina);
+
+            return razmeri;
 
         }
+   
+        public Parametri SozdanieParametrov(Dictionary<string, object> razmeri)
+        {
+            Parametri parametri = new Parametri((Visota)razmeri["Visota"], (Shirina)razmeri["Shirina"], (Dlina)razmeri["Dlina"], (Glubina)razmeri["Glubina"]);
+            return parametri;
+        }
+
 
         public string VvodCveta()
         {
@@ -49,7 +63,26 @@ namespace ShkafProject
             return cvetVibor;
         }
 
-        
+        public Cvet SozdanieCveta(String cvetVibor)
+        {
+            Cvet cvet = new Cvet(cvetVibor);
+            return cvet;
+        }
+
+        public Polka SozdaniePolki(Parametri parametri, Cvet cvet)
+        {
+            Polka polka = new Polka(parametri, cvet);
+            return polka;
+        }
+
+        public Shkaf SozdanieShkafa(Parametri parametri, Cvet cvet, Polka polka)
+        {
+            Shkaf shkaf = new Shkaf(parametri, cvet, polka);
+            return shkaf;
+        }
+
+
+
 
     }
 }

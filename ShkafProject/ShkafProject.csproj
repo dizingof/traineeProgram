@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Conveer.cs" />
     <Compile Include="Cvet.cs" />
+    <Compile Include="IGetInfo.cs" />
     <Compile Include="Razmeri\Dlina.cs" />
     <Compile Include="Razmeri\Glubina.cs" />
     <Compile Include="Parametri\Parametri.cs" />

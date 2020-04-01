@@ -10,50 +10,33 @@ namespace ShkafProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Vvedite razmer visoti shkafa");
-            int razmerVisoti = int.Parse(Console.ReadLine());
-            Visota visotaShkafa = new Visota(razmerVisoti);
+            Conveer myConv =new Conveer();
+            Console.WriteLine("Vvod razmerov polki");
+            Dictionary<string, int> naborRazmerovPolki = myConv.VvodRazmerov();
+            Dictionary<string, object> razmeriPolki = myConv.SozdanieRazmerov(naborRazmerovPolki);
+            Parametri parametriPolki = myConv.SozdanieParametrov(razmeriPolki);
+            String vvedenniyCvetPolki = myConv.VvodCveta();
+            Cvet cvetPolki = myConv.SozdanieCveta(vvedenniyCvetPolki);
+            Polka polka = myConv.SozdaniePolki(parametriPolki, cvetPolki);
 
-            Console.WriteLine("Vvedite razmer shirini shkafa");
-            int razmerShirini = int.Parse(Console.ReadLine());
-            Shirina shirinaShkafa = new Shirina(razmerShirini);
 
-            Console.WriteLine("Vvedite razmer dlini shkafa");
-            int razmerDlini = int.Parse(Console.ReadLine());
-            Dlina dlinaShkafa = new Dlina(razmerDlini);
+            Console.WriteLine("Vvod razmerov Shkafa");
+            Dictionary<string, int> naborRazmerovShkafa = myConv.VvodRazmerov();
+            Dictionary<string, object> razmeriShkafa = myConv.SozdanieRazmerov(naborRazmerovShkafa);
+            Parametri parametriShkafa = myConv.SozdanieParametrov(razmeriShkafa);
+            String vvedenniyCvetShkafa = myConv.VvodCveta();
+            Cvet cvetShkafa = myConv.SozdanieCveta(vvedenniyCvetShkafa);
+            Shkaf shkaf = myConv.SozdanieShkafa(parametriShkafa, cvetShkafa, polka);
 
-            Console.WriteLine("Vvedite razmer glubini shkafa");
-            int razmerGlubini = int.Parse(Console.ReadLine());
-            Glubina glubinaShkafa = new Glubina(razmerGlubini);
-
-            Console.WriteLine("Vvedite visotu polki");
-            int razmervisotiPolki = int.Parse(Console.ReadLine());
-            Visota visotaPolki = new Visota(razmervisotiPolki);
-
-            Console.WriteLine("Vvedite shirinu polki");
-            int razmerShiriniPolki = int.Parse(Console.ReadLine());
-            Shirina shirinaPolki = new Shirina(razmerShiriniPolki);
-
-            Console.WriteLine("Vvedite dlinu polki");
-            int razmerDliniPolki = int.Parse(Console.ReadLine());
-            Dlina dlinaPolki = new Dlina(razmerDliniPolki);
-
-            Console.WriteLine("Vvedite cvet polki");
-            string cvetVibor = Console.ReadLine();
-            Cvet cvetPolki = new Cvet(cvetVibor);
-            Polka polkaShkafa = new Polka(visotaPolki, shirinaPolki, dlinaPolki, cvetPolki);
-
-            Console.WriteLine("Vvedite cvet shkafa");
-            string cvetShkafa = Console.ReadLine();
-            Cvet cvet = new Cvet(cvetShkafa);
-
-            Shkaf shkaf = new Shkaf(visotaShkafa, shirinaShkafa, dlinaShkafa, glubinaShkafa, polkaShkafa, cvet);
-            shkaf.OtobrazitVisotaShkafa();
-            shkaf.OtobrazitShirinaShkafa();
-            shkaf.OtobrazitDlinaShkafa();
-            shkaf.OtobrazitGlubinaShkafa();
-            
+            Console.WriteLine("-----------------------------------------");
+            polka.OtobrazitParametriPolki();
+            polka.OtobrazitCvetPolki();
+            Console.WriteLine("-----------------------------------------");
+            shkaf.OtobrazitParametriShkafa();
             shkaf.OtobrazitCvetShkafa();
+            
+
+
 
             Console.ReadLine();
 
