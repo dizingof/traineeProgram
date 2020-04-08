@@ -16,10 +16,17 @@ namespace Client
 				TcpClient client = new TcpClient("127.0.0.1", 7000);
 				Console.WriteLine("Client connected");
 				NetworkStream stream = client.GetStream();
-				byte[] bytes = new byte[256];
-				stream.Read(bytes, 0, bytes.Length);
-				string answer = Encoding.ASCII.GetString(bytes);
+
+				string request = "I have a question";
+				byte [] bytesWrite = Encoding.ASCII.GetBytes(request);
+				stream.Write(bytesWrite, 0, bytesWrite.Length);
+				stream.Flush();
+				Console.WriteLine("Client send request:"+ bytesWrite.Length);
+				byte[] bytesRead = new byte[256];
+				int length = stream.Read(bytesRead, 0, bytesRead.Length);
+				string answer = Encoding.ASCII.GetString(bytesRead, 0, length);
 				Console.WriteLine(answer);
+
 				client.Close();
 				Console.WriteLine("Client closed");
 			}

@@ -21,8 +21,15 @@ namespace ClientServer
                 {
                     TcpClient clientSocket = serverSocket.AcceptTcpClient();
                     NetworkStream stream = clientSocket.GetStream();
-                    string message = "<H1>Hello!</H1>";
-                    byte[] bytes = Encoding.ASCII.GetBytes(message);
+
+                    byte[] bytes = new byte[256];
+                    int length = stream.Read(bytes, 0, bytes.Length);
+                    string request = Encoding.ASCII.GetString(bytes, 0 ,length);
+                    Console.WriteLine("Got request" + request);
+
+
+                    string message = "Length of you request:" + request.Length;
+                     bytes = Encoding.ASCII.GetBytes(message);
                     stream.Write(bytes, 0, bytes.Length);
                     stream.Flush();
                     Console.WriteLine("Send message:" + message);
