@@ -23,7 +23,7 @@ namespace ShkafProject
             Console.WriteLine("Vvedite razmer glubini");
             int razmerGlubini = int.Parse(Console.ReadLine());
 
-            Dictionary<string, int> naborRazmerov =new Dictionary<string, int>();
+            Dictionary<string, int> naborRazmerov = new Dictionary<string, int>();
             naborRazmerov.Add("Visota", razmerVisoti);
             naborRazmerov.Add("Shirina", razmerShirini);
             naborRazmerov.Add("Dlina", razmerDlini);
