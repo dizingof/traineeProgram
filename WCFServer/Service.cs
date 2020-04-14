@@ -8,9 +8,11 @@ namespace WCFServer
 {
     class Service : IContract
     {
-        public void Say(string input)
+        public string Say(string input)
         {
             Console.WriteLine(input);
+
+            return "OK!";
         }
     }
 }

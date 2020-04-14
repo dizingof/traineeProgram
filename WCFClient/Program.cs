@@ -17,7 +17,8 @@ namespace WCFClient
             EndpointAddress endpoint = new EndpointAddress(address);
             ChannelFactory<IContract> factory = new ChannelFactory<IContract>(binding, endpoint);
             IContract channel = factory.CreateChannel();
-            channel.Say("Hello wcf!!!");
+            string response = channel.Say("Hello wcf!!!");
+            Console.WriteLine(response);
             Console.ReadLine();
         }
     }

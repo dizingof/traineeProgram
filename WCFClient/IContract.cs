@@ -11,6 +11,6 @@ namespace WCFClient
     interface IContract
     {
         [OperationContract]
-        void Say(string input);
+        string Say(string input);
     }
 }

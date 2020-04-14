@@ -11,6 +11,6 @@ namespace WCFServer
     interface IContract
     {
         [OperationContract]
-        void Say(string input);
+        string Say(string input);
     }
 }
