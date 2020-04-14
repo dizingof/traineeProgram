@@ -5,22 +5,20 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WCFServer
+namespace WCFClient
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Title = "Server";
+            Console.Title = "Client";
             Uri address = new Uri("http://localhost:45500/IContract");
             BasicHttpBinding binding = new BasicHttpBinding();
-            Type contract = typeof(IContract);
-            ServiceHost host = new ServiceHost(typeof(Service));
-            host.AddServiceEndpoint(contract, binding, address);
-            host.Open();
-            Console.WriteLine("Application ready receive message");
+            EndpointAddress endpoint = new EndpointAddress(address);
+            ChannelFactory<IContract> factory = new ChannelFactory<IContract>(binding, endpoint);
+            IContract channel = factory.CreateChannel();
+            channel.Say("Hello wcf!!!");
             Console.ReadLine();
-            host.Close();
         }
     }
 }
