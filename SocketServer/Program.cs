@@ -36,5 +36,22 @@ namespace SocketServer
             }
             
         }
+
+        public void test()
+        {
+            int a = 0;
+            int b = 10;
+            do
+            {
+                if (a % 2 == 0)
+                {
+                    Console.WriteLine(a);
+                }                
+                a++;
+            }
+            while (a < b);
+
+            Console.ReadLine();
+        }
     }
 }
